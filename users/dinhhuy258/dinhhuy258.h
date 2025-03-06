@@ -15,6 +15,9 @@
 #define MOUSE_DOWN MS_DOWN
 #define MOUSE_UP MS_UP
 #define MOUSE_RIGHT MS_RGHT
+#define MOUSE_HINT_MOVE LGUI(LOPT(KC_L))
+#define MOUSE_HINT_SCRN LGUI(LOPT(KC_S))
+#define MOUSE_HINT_CLK HYPR(KC_ENT)
 #define WHEEL_LEFT MS_WHLL
 #define WHEEL_DOWN MS_WHLD
 #define WHEEL_UP MS_WHLU
@@ -84,9 +87,9 @@ enum keycodes {
 #define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________MOU_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ___________________MOU_R2__________________       MOUSE_LEFT,      MOUSE_DOWN,      MOUSE_UP,        MOUSE_RIGHT,    LGUI(KC_TAB)
-#define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,    LGUI(KC_GRAVE)
+#define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_MOVE, MOUSE_HINT_CLK,  MOUSE_HINT_SCRN, XXXXXXX
+#define ___________________MOU_R2__________________       MOUSE_LEFT,      MOUSE_DOWN,      MOUSE_UP,        MOUSE_RIGHT,     LGUI(KC_TAB)
+#define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,     LGUI(KC_GRAVE)
 #define ______________MOU_THUMB_RIGHT______________       LEFT_CLICK,      RIGHT_CLICK
 
 #define ___________________SYM_L1__________________       KC_AMPR,         KC_ASTR,         KC_LCBR,         KC_RCBR,         KC_GRV
