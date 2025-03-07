@@ -87,7 +87,7 @@ enum keycodes {
 #define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_MOVE, MOUSE_HINT_CLK,  MOUSE_HINT_SCRN, XXXXXXX
+#define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_CLK, MOUSE_HINT_MOVE,  MOUSE_HINT_SCRN, XXXXXXX
 #define ___________________MOU_R2__________________       MOUSE_LEFT,      MOUSE_DOWN,      MOUSE_UP,        MOUSE_RIGHT,     LGUI(KC_TAB)
 #define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,     LGUI(KC_GRAVE)
 #define ______________MOU_THUMB_RIGHT______________       LEFT_CLICK,      RIGHT_CLICK
