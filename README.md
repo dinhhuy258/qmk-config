@@ -32,10 +32,14 @@ To compile and flash the keymap for the Corne, use:
 make crkbd:dinhhuy258:flash
 ```
 
-For my Corne keyboard equipped with the RP2040 chip, the default serial D2 pin is non-functional. As a result, the following modification has been made:
+For one of my Corne keyboards equipped with the RP2040 chip, the default serial D2 pin is non-functional. As a result, the following modification has been made:
 
 - The D2 and D3 pins have been connected and soldered together.
-- D3 is configured to function as the serial data pin in the firmware.
+- D3 can be configured to function as the serial data pin in the firmware by using the build flag:
+
+```sh
+make crkbd:dinhhuy258:flash USE_SERIAL_PIN_D3=yes
+```
 
 ```
               .__|~~|__.
@@ -53,7 +57,13 @@ SCL/D0 [  3] -|        |- [A2 ] F5
     B5 [  9] -|________|- [10 ] B6
 ```
 
-To initially boot the RP2040 into bootloader mode (e.g., for flashing firmware):
+Additionally, RGB lighting can be controlled with build flags:
+
+```sh
+make crkbd:dinhhuy258:flash USE_RGB_LIGHTING=yes
+```
+
+To initially boot the RP2040 into bootloader mode
 
 1. Hold down the BOOT button on the RP2040 board.
 2. While holding the BOOT button, plug the USB cable into your computer.
