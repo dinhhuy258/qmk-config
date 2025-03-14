@@ -1,17 +1,8 @@
 #include "dinhhuy258.h"
-#include "luna.h"
 #include "bongocat.h"
 
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-    if (is_keyboard_master()) {
-        return OLED_ROTATION_270;
-    }
-
-    return rotation;
-}
-
 void oled_render_master(void) {
-    render_luna(0, 13);
+    render_bongocat();
 }
 
 void oled_render_slave(void) {
