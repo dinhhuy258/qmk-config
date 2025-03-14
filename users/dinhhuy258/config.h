@@ -6,6 +6,8 @@
 #define COMBO_TERM 50
 // https://docs.qmk.fm/features/combo#generic-hook-to-dis-allow-a-combo-activation
 #define COMBO_SHOULD_TRIGGER
+// https://docs.qmk.fm/tap_hold#chordal-hold
+#define CHORDAL_HOLD
 
 #define MK_3_SPEED
 #define MK_MOMENTARY_ACCEL
