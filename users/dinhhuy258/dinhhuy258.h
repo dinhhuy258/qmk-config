@@ -55,7 +55,6 @@ enum layers {
     SYM,
     NUM,
     WM,
-    GAME,
 };
 
 enum keycodes {
@@ -81,7 +80,7 @@ enum keycodes {
 #define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         LSG(KC_TAB)
 #define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         SWITCH_APP
 #define ___________________NAV_R3__________________       NAV_LEFT,        VIM_LEFT,        VIM_RIGHT,       NAV_RIGHT,       LGUI(KC_GRAVE)
-#define ______________NAV_THUMB_RIGHT______________       _______,         TO(GAME)
+#define ______________NAV_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         MOU_MIN_SPEED,   MOU_MAX_SPEED,   XXXXXXX
 #define ___________________MOU_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
@@ -122,13 +121,3 @@ enum keycodes {
 #define ___________________WM_R2___________________       WM_FOCUS_LEFT,   WM_FOCUS_DOWN,   WM_FOCUS_UP,     WM_FOCUS_RIGHT,  WM_TOGGLE_FT
 #define ___________________WM_R3___________________       XXXXXXX,         WM_MOVE_MONITOR, XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
-
-#define ___________________GAME_L1_________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
-#define ___________________GAME_L2_________________       KC_A,            KC_S,            KC_D,            KC_F,            KC_G
-#define ___________________GAME_L3_________________       KC_Z,            KC_X,            KC_C,            KC_V,            KC_B
-#define ______________GAME_THUMB_LEFT______________       KC_ESC,          KC_SPC
-
-#define ___________________GAME_R1_________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
-#define ___________________GAME_R2_________________       KC_H,            KC_J,            KC_K,            KC_L,            KC_SCLN
-#define ___________________GAME_R3_________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________GAME_THUMB_RIGHT_____________       KC_ENT,          TO(BASE)
