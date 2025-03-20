@@ -221,3 +221,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             break;
     }
 }
+
+/**********************************************************************
+ * Tap Dance Configuration
+ **********************************************************************/
+
+tap_dance_action_t tap_dance_actions[] = {
+    [TD_SWITCH_APP] = ACTION_TAP_DANCE_DOUBLE(LSG(KC_TAB), LGUI(KC_TAB)),
+};

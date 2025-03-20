@@ -61,6 +61,10 @@ enum keycodes {
     SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
 };
 
+enum tapdance {
+    TD_SWITCH_APP = 0,
+};
+
 // clang-format off
 #define __________________BASE_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
 #define __________________BASE_L2__________________       LGUI_T(KC_A),    LOPT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)
@@ -77,7 +81,7 @@ enum keycodes {
 #define ___________________NAV_L3__________________       KC_VOLD,         KC_VOLU,         KC_MUTE,         TMUX_PREFIX,     XXXXXXX
 #define ______________NAV_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         LSG(KC_TAB)
+#define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         TD(TD_SWITCH_APP)
 #define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         SWITCH_APP
 #define ___________________NAV_R3__________________       NAV_LEFT,        VIM_LEFT,        VIM_RIGHT,       NAV_RIGHT,       LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,         _______
@@ -87,7 +91,7 @@ enum keycodes {
 #define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_CLK, MOUSE_HINT_MOVE,  MOUSE_HINT_SCRN, LSG(KC_TAB)
+#define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_CLK, MOUSE_HINT_MOVE,  MOUSE_HINT_SCRN, TD(TD_SWITCH_APP)
 #define ___________________MOU_R2__________________       MOUSE_LEFT,      MOUSE_DOWN,      MOUSE_UP,        MOUSE_RIGHT,     SWITCH_APP
 #define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,     LGUI(KC_GRAVE)
 #define ______________MOU_THUMB_RIGHT______________       LEFT_CLICK,      RIGHT_CLICK
