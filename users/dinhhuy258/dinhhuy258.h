@@ -55,6 +55,9 @@ enum layers {
     SYM,
     NUM,
     WM,
+#ifdef GAME_LAYER_ENABLE
+    GAME,
+#endif
 };
 
 enum keycodes {
@@ -125,4 +128,20 @@ enum tapdance {
 #define ___________________WM_R1___________________       WM_MOVE_WS_1,    WM_MOVE_WS_2,    WM_MOVE_WS_3,    WM_MOVE_WS_4,    WM_MOVE_WS_5
 #define ___________________WM_R2___________________       WM_FOCUS_LEFT,   WM_FOCUS_DOWN,   WM_FOCUS_UP,     WM_FOCUS_RIGHT,  WM_TOGGLE_FT
 #define ___________________WM_R3___________________       XXXXXXX,         WM_MOVE_MONITOR, XXXXXXX,         XXXXXXX,         XXXXXXX
+#ifdef GAME_LAYER_ENABLE
+#define ______________WM_THUMB_RIGHT_______________       TO(GAME),        _______
+#else
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
+#endif
+
+#ifdef GAME_LAYER_ENABLE
+#define ___________________GAME_L1_________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
+#define ___________________GAME_L2_________________       KC_A,            KC_S,            KC_D,            KC_F,            KC_G
+#define ___________________GAME_L3_________________       KC_Z,            KC_X,            KC_C,            KC_V,            KC_B
+#define ______________GAME_THUMB_LEFT______________       KC_ESC,          KC_SPC
+
+#define ___________________GAME_R1_________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
+#define ___________________GAME_R2_________________       KC_H,            KC_J,            KC_K,            KC_L,            KC_SCLN
+#define ___________________GAME_R3_________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
+#define ______________GAME_THUMB_RIGHT_____________       KC_ENT,          TO(BASE)
+#endif
