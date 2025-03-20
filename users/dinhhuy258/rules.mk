@@ -1,10 +1,9 @@
 include $(USER_PATH)/oled/rules.mk
 
-SRC += $(USER_PATH)/dinhhuy258.c
 SRC += $(USER_PATH)/caps_word.c
 SRC += $(USER_PATH)/swapper.c
 # https://github.com/qmk/qmk_firmware/issues/21137#issuecomment-1577898767
-INTROSPECTION_KEYMAP_C = $(USER_PATH)/combos.c
+INTROSPECTION_KEYMAP_C = $(USER_PATH)/dinhhuy258.c
 
 MOUSEKEY_ENABLE = yes
 CAPS_WORD_ENABLE = yes
