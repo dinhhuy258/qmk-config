@@ -17,3 +17,4 @@
 #define MK_C_INTERVAL_2 16
 
 #define TAPPING_TERM 200
+#define TAPPING_TERM_PER_KEY

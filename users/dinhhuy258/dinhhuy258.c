@@ -17,6 +17,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TD(TD_SWITCH_APP):
+            return TAPPING_TERM + 50;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, NAV, SYM, WM);
 
@@ -146,13 +155,11 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             if (pressed) {
                 SEND_STRING(":q!");
             }
-
             break;
         case INPUT_SOURCE:
             if (pressed) {
                 tap_code16(HYPR(KC_TAB));
             }
-
             break;
         case CAPS_WORD:
             if (pressed) {
@@ -226,7 +233,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
  * Tap Dance Configuration
  **********************************************************************/
 
-void safe_reset(tap_dance_state_t *state, void *user_data) {
+void td_safe_reset(tap_dance_state_t *state, void *user_data) {
     if (state->count >= 3) {
         // Reset the keyboard if you tap the key more than three times
         reset_keyboard();
@@ -234,7 +241,15 @@ void safe_reset(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_switch_app_finished(tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+        tap_code16(LSG(KC_TAB));
+    } else {
+        tap_code16(LGUI(KC_TAB));
+    }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_SWITCH_APP] = ACTION_TAP_DANCE_DOUBLE(LSG(KC_TAB), LGUI(KC_TAB)),
-    [TD_RESET]      = ACTION_TAP_DANCE_FN(safe_reset),
+    [TD_SWITCH_APP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_switch_app_finished, NULL),
+    [TD_RESET]      = ACTION_TAP_DANCE_FN(td_safe_reset),
 };
