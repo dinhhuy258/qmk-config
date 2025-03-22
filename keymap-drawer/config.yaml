@@ -1,0 +1,64 @@
+layout:
+  qmk_keyboard: corne_rotated
+  layout_name: LAYOUT_split_3x5_3
+layers:
+  BASE:
+    - [Q, W, E, R, T, Y, U, I, O, P]
+    - [{h: Gui, t: A}, {h: Alt, t: S}, {h: Ctrl, t: D}, {h: Shift, t: F}, {h: Hyper, t: G}, {h: Hyper, t: H}, {h: Shift, t: J}, {h: Ctrl, t: K}, {h: Alt, t: L}, {h: Gui, t: "'"}]
+    - [Z, X, C, V, B, N, M, ",", ., /]
+    - null
+    - {h: NAV, t: Esc}
+    - {h: MOU, t: Space}
+    - {h: NUM, t: Enter}
+    - {h: SYM, t: BSpace}
+    - null
+  NAV:
+    - ["$$tabler:brightness-down$$", "$$tabler:brightness-up$$", "$$tabler:camera$$", null, null, null, null, null, null, "Switch app ←"]
+    - ["Gui", "Alt", "Ctrl", "Shift", null, "←", "↓", "↑", "→", "Switch app →"]
+    - ["$$tabler:volume-2$$", "$$tabler:volume$$", "$$tabler:volume-off$$", "tmux", null, "Nav left", "Vim left", "Vim right", "Nav right", "Switch window"]
+    - null
+    - {type: held}
+    - null
+    - null
+    - null
+    - null
+  MOU:
+    - [null, null, "Mouse Min", "Mouse Max", null, null, "Click hint", "Mouse hint", "Screen hint", "Switch app ←"]
+    - ["Gui", "Alt", "Ctrl", "Shift", null, "Mouse ←", "Mouse ↓", " Mouse ↑", "Mouse →", "Switch app →"]
+    - [null, null, null, null, null, "Scroll ←", "Scroll ↓", " Scroll ↑", "Scroll →", "Switch window"]
+    - null
+    - null
+    - {type: held}
+    - "Left click"
+    - "Right click"
+    - null
+  SYM:
+    - ["&", "*", "{", "}", "`", "@", "+", "_", "|", ":"]
+    - ["^", "$", "(", ")", "~", "!", "=", "-", "\\", ";"]
+    - ["%", "#", "[", "]", "?", "'", "\"", ",", ".", "/"]
+    - null
+    - null
+    - null
+    - null
+    - {type: held}
+    - null
+  NUM:
+    - [null, "7", "8", "9", null, null, "Vim", null, null, null]
+    - [null, "4", "5", "6", null, null, "Shift", "Ctrl", "Alt", "Gui"]
+    - ["0", "1", "2", "3", null, null, "tmux", ",", ".", null]
+    - null
+    - null
+    - null
+    - {type: held}
+    - null
+    - null
+  WM:
+    - ["WS 1", "WS 2", "WS 3", "WS 4", "WS 5", "→WS 1", "→WS 2", "→WS 3", "→WS 4", "→WS 5"]
+    - ["Fullscr", "Resize", "Move", "Tiles", "Accord", "Focus ←", "Focus ↓", "Focus ↑", "Focus →", "Float"]
+    - ["Join", null, "Close", null, null, null, "Next Monitor", null, null, null]
+    - null
+    - {type: held}
+    - "Reset"
+    - null
+    - {type: held}
+    - null
