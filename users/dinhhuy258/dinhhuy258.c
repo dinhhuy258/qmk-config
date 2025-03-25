@@ -243,9 +243,9 @@ void td_safe_reset(tap_dance_state_t *state, void *user_data) {
 
 void td_switch_app_finished(tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
-        tap_code16(LSG(KC_TAB));
-    } else {
         tap_code16(LGUI(KC_TAB));
+    } else {
+        tap_code16(LSG(KC_TAB));
     }
 }
 
