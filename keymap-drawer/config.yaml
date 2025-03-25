@@ -25,7 +25,7 @@ layers:
   MOU:
     - [null, null, "Mouse Min", "Mouse Max", null, null, "Click hint", "Mouse hint", "Screen hint", "Switch app ←"]
     - ["Gui", "Alt", "Ctrl", "Shift", null, "Mouse ←", "Mouse ↓", " Mouse ↑", "Mouse →", "Switch app →"]
-    - [null, null, null, null, null, "Scroll ←", "Scroll ↓", " Scroll ↑", "Scroll →", "Switch window"]
+    - [null, null, null, null, Jiggle, "Scroll ←", "Scroll ↓", " Scroll ↑", "Scroll →", "Switch window"]
     - null
     - null
     - {type: held}

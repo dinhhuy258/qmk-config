@@ -62,6 +62,7 @@ enum layers {
 
 enum keycodes {
     SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
+    JIGGLE,
 };
 
 enum tapdance {
@@ -92,7 +93,7 @@ enum tapdance {
 
 #define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         MOU_MIN_SPEED,   MOU_MAX_SPEED,   XXXXXXX
 #define ___________________MOU_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
-#define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________MOU_L3__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         JIGGLE
 #define ______________MOU_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________MOU_R1__________________       XXXXXXX,         MOUSE_HINT_CLK, MOUSE_HINT_MOVE,  MOUSE_HINT_SCRN, TD(TD_SWITCH_APP)
