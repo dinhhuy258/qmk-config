@@ -23,3 +23,7 @@ else
     RGBLIGHT_ENABLE = no
     RGB_MATRIX_ENABLE = no
 endif
+
+ifneq ($(strip $(TAPPING_TERM)),)
+    OPT_DEFS += -DCUSTOM_TAPPING_TERM=$(TAPPING_TERM)
+endif

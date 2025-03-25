@@ -16,5 +16,9 @@
 #define MK_C_OFFSET_2 42
 #define MK_C_INTERVAL_2 16
 
+#ifndef CUSTOM_TAPPING_TERM
 #define TAPPING_TERM 200
+#else
+#define TAPPING_TERM CUSTOM_TAPPING_TERM
+#endif
 #define TAPPING_TERM_PER_KEY

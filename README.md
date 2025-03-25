@@ -63,6 +63,12 @@ Additionally, RGB lighting can be controlled with build flags:
 make crkbd:dinhhuy258:flash USE_RGB_LIGHTING=yes
 ```
 
+You can also customize the tapping term (default is 200ms) by using the TAPPING_TERM_MS build flag:
+
+```sh
+make crkbd:dinhhuy258:flash TAPPING_TERM_MS=150
+```
+
 To initially boot the RP2040 into bootloader mode
 
 1. Hold down the BOOT button on the RP2040 board.
