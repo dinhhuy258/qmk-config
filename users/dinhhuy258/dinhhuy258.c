@@ -1,4 +1,6 @@
 #include "dinhhuy258.h"
+#include "definitions/layers.h"
+#include "definitions/keycodes.h"
 #include "features/swapper.h"
 
 bool     switch_app_active                 = false;

@@ -1,0 +1,61 @@
+#pragma once
+
+#include QMK_KEYBOARD_H
+
+#define TMUX_PREFIX LCTL(KC_F)
+#define VIM_PREFIX KC_SCLN
+#define SCREENSHOT HYPR(KC_4)
+#define NAV_LEFT KC_F23
+#define NAV_RIGHT KC_F24
+#define VIM_LEFT KC_F21
+#define VIM_RIGHT KC_F22
+#define MOU_MAX_SPEED MS_ACL2
+#define MOU_MIN_SPEED MS_ACL0
+#define MOUSE_LEFT MS_LEFT
+#define MOUSE_DOWN MS_DOWN
+#define MOUSE_UP MS_UP
+#define MOUSE_RIGHT MS_RGHT
+#define MOUSE_HINT_MOVE LGUI(LOPT(KC_L))
+#define MOUSE_HINT_SCRN LGUI(LOPT(KC_S))
+#define MOUSE_HINT_CLK HYPR(KC_ENT)
+#define WHEEL_LEFT MS_WHLL
+#define WHEEL_DOWN MS_WHLD
+#define WHEEL_UP MS_WHLU
+#define WHEEL_RIGHT MS_WHLR
+#define RIGHT_CLICK MS_BTN2
+#define LEFT_CLICK MS_BTN1
+#define WM_FOCUS_LEFT LOPT(LCTL(LSFT(KC_H)))
+#define WM_FOCUS_DOWN LOPT(LCTL(LSFT(KC_J)))
+#define WM_FOCUS_UP LOPT(LCTL(LSFT(KC_K)))
+#define WM_FOCUS_RIGHT LOPT(LCTL(LSFT(KC_L)))
+#define WM_FULLSCREEN LOPT(LCTL(LSFT(KC_A)))
+#define WM_TOGGLE_FT LOPT(LCTL(LSFT(KC_SCLN)))
+#define WM_CLOSE LOPT(LCTL(LSFT(KC_C)))
+#define WM_WS_1 LOPT(LCTL(LSFT(KC_Q)))
+#define WM_WS_2 LOPT(LCTL(LSFT(KC_W)))
+#define WM_WS_3 LOPT(LCTL(LSFT(KC_E)))
+#define WM_WS_4 LOPT(LCTL(LSFT(KC_R)))
+#define WM_WS_5 LOPT(LCTL(LSFT(KC_T)))
+#define WM_MOVE_WS_1 LOPT(LCTL(LSFT(KC_Y)))
+#define WM_MOVE_WS_2 LOPT(LCTL(LSFT(KC_U)))
+#define WM_MOVE_WS_3 LOPT(LCTL(LSFT(KC_I)))
+#define WM_MOVE_WS_4 LOPT(LCTL(LSFT(KC_O)))
+#define WM_MOVE_WS_5 LOPT(LCTL(LSFT(KC_P)))
+#define WM_MOVE_MONITOR LOPT(LCTL(LSFT(KC_M)))
+#define WM_MODE_RESIZE LOPT(LCTL(LSFT(KC_S)))
+#define WM_MODE_MOVE LOPT(LCTL(LSFT(KC_D)))
+#define WM_L_ACCORDION LOPT(LCTL(LSFT(KC_F)))
+#define WM_L_TILES LOPT(LCTL(LSFT(KC_G)))
+#define WM_MODE_JOIN LOPT(LCTL(LSFT(KC_Z)))
+
+// Tapdance keycodes
+enum tapdance_keycodes {
+    TD_SWITCH_APP,
+    TD_RESET,
+};
+
+// Custom keycodes
+enum keycodes {
+    SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
+    JIGGLE,
+};

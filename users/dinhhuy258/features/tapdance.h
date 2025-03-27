@@ -1,4 +1,8 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "dinhhuy258.h"
+
+// enum tapdance {
+//     TD_SWITCH_APP = 0,
+//     TD_RESET,
+// };
