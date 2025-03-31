@@ -7,8 +7,8 @@ USER_NAME := dinhhuy258
 OLED_ENABLE = yes
 OLED_DRIVER = ssd1306
 
-ifneq ($(strip $(USE_SERIAL_PIN_D3)),)
-    OPT_DEFS += -DUSE_SERIAL_PIN_D3
+ifneq ($(strip $(SERIAL_PIN)),)
+    OPT_DEFS += -DCUSTOM_SERIAL_PIN=$(SERIAL_PIN)
 endif
 
 ifneq ($(strip $(GAME_LAYER_ENABLE)),)

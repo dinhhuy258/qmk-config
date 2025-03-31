@@ -38,7 +38,7 @@ For one of my Corne keyboards equipped with the RP2040 chip, the default serial 
 - D3 can be configured to function as the serial data pin in the firmware by using the build flag:
 
 ```sh
-make crkbd:dinhhuy258:flash USE_SERIAL_PIN_D3=yes
+make crkbd:dinhhuy258:flash SERIAL_PIN=D3
 ```
 
 ```

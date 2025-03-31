@@ -3,9 +3,8 @@
 // https://docs.qmk.fm/#/config_options?id=setting-handedness
 #define MASTER_RIGHT
 
-#ifdef USE_SERIAL_PIN_D3
-    // The default serial pin is D2, but my microcontroller has a problem with this pin, causing communication issues between the split keyboards.
-    // So, I soldered a wire between the D2 and D3 pins and used D3 as the serial pin.
+#ifdef CUSTOM_SERIAL_PIN
+    // The default serial pin is D2, but we can customize it with the SERIAL_PIN build flag
     #undef SOFT_SERIAL_PIN
-    #define SOFT_SERIAL_PIN D3
+    #define SOFT_SERIAL_PIN CUSTOM_SERIAL_PIN
 #endif
