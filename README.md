@@ -6,7 +6,7 @@ This repository contains firmware for my keyboards running QMK.
 
 This repository is designed as an [External QMK Userspace](https://docs.qmk.fm/newbs_external_userspace). To use it with QMK, follow these steps:
 
-1. [Set up QMK](https://docs.qmk.fm/newbs) if you haven't already.
+1. [Set up QMK](https://docs.qmk.fm/newbs) if you have not already.
 2. Clone this repository to your local machine.
 3. Run the following command to configure QMK to use this repository as an overlay:
 
