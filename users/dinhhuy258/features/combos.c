@@ -1,5 +1,3 @@
-#include "combos.h"
-
 enum combos {
     VIM_QUIT,
     INPUT_SOURCE,

@@ -1,5 +1,3 @@
-#include "tapdance.h"
-
 void td_safe_reset(tap_dance_state_t *state, void *user_data) {
     if (state->count >= 3) {
         // Reset the keyboard if you tap the key more than three times
