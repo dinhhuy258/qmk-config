@@ -45,7 +45,6 @@ combo_t key_combos[] = {
     [VIM_QUIT] = COMBO_ACTION(vim_quit_combo),
     [INPUT_SOURCE] = COMBO_ACTION(input_source_combo),
     [CAPS_WORD] = COMBO_ACTION(caps_word_combo),
-    [VIM_QUIT] = COMBO_ACTION(vim_quit_combo),
     [TAB] = COMBO(tab_combo, KC_TAB),
     [BACKSPACE] = COMBO(backspace_combo, KC_BSPC),
     [CUT] = COMBO_ACTION(cut_combo),
