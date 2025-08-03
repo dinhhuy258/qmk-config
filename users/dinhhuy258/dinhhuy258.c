@@ -5,10 +5,23 @@
 #include "definitions/keyboard_config.h"
 #include "features/swapper.h"
 #include "features/led_indicators.h"
+#include "features/secret_triggers.h"
 
 bool switch_app_active = false;
 
+void keyboard_post_init_user(void) {
+    secret_system_init();
+}
+
+void housekeeping_task_user(void) {
+    secret_system_task();
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    // Process secret triggers first - they may consume the keycode
+    if (!process_secret_triggers(keycode, record)) {
+        return false;
+    }
     if (record->event.pressed) {
         static deferred_token token  = INVALID_DEFERRED_TOKEN;
         static report_mouse_t report = {0};

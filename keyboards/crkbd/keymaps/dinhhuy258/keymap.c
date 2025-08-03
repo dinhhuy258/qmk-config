@@ -62,4 +62,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______________GAME_THUMB_LEFT______________, ______________GAME_THUMB_RIGHT_____________
     ),
     #endif
+    #ifndef NO_SECRETS
+    [SECRET] = LAYOUT_split_3x5_3_base_wrapper(
+        __________________SECRET_L1________________, __________________SECRET_R1________________,
+        __________________SECRET_L2________________, __________________SECRET_R2________________,
+        __________________SECRET_L3________________, __________________SECRET_R3________________,
+        _____________SECRET_THUMB_LEFT______________, _____________SECRET_THUMB_RIGHT_____________
+    ),
+    #endif
 };

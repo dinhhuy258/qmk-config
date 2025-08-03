@@ -10,4 +10,7 @@ enum layers {
 #ifdef GAME_LAYER_ENABLE
     GAME,
 #endif
+#ifndef NO_SECRETS
+    SECRET,
+#endif
 };

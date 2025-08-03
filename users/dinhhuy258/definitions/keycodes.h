@@ -58,4 +58,14 @@ enum tapdance_keycodes {
 enum keycodes {
     SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
     JIGGLE,
+#ifndef NO_SECRETS
+    // Secret macro keycodes
+    SECRET_1,    // First secret
+    SECRET_2,    // Second secret  
+    SECRET_3,    // Third secret
+    SECRET_4,    // Fourth secret
+    SECRET_5,    // Fifth secret
+    SECRET_TRIGGER, // Main secret activation trigger
+    SECRET_EMERGENCY_DISABLE, // Emergency disable for secret mode
+#endif
 };
