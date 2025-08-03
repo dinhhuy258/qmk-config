@@ -5,35 +5,6 @@ parse_config:
   mark_alternate_layer_activators: false
   sticky_label: "sticky"
   toggle_label: "toggle"
-draw_config:
-  key_w: 60.0
-  key_h: 56.0
-  split_gap: 30.0
-  combo_w: 28.0
-  combo_h: 26.0
-  key_rx: 6.0
-  key_ry: 6.0
-  n_columns: 10
-  svg_style: |
-    /* Improve font and spacing */
-    .combo, .held, .shifted { font-size: 11px; }
-    .key { font-size: 12px; }
-    .tap, .hold { font-size: 11px; }
-    .layer { font-size: 14px; font-weight: bold; }
-    .ghost { opacity: 0.3; }
-
-    /* Better contrast and readability */
-    .key rect { stroke-width: 1; }
-    .combo rect { stroke-width: 0.8; }
-
-    /* Cleaner mod key styling */
-    .mod { font-weight: 600; }
-
-    /* Layer highlight */
-    .held { fill: #e6f3ff; stroke: #0066cc; }
-
-    /* Better combo styling */
-    .combo { fill: #fff3cd; stroke: #856404; }
 layers:
   BASE:
     - [Q, W, E, R, T, Y, U, I, O, P]
