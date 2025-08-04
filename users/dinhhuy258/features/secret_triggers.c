@@ -5,6 +5,17 @@
 // Global secret system state
 static secret_state_t secret_state = {0};
 
+// Helper function to handle secret key press and cleanup
+static void handle_secret_key(uint16_t secret_keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
+        keyrecord_t fake_record = *record;
+        process_secret_macro(secret_keycode, &fake_record);
+    }
+    secret_mode_deactivate();
+    layer_clear();
+}
+
 void secret_system_init(void) {
     secret_state.is_secret_mode_active = false;
     secret_state.activation_time       = 0;
@@ -13,93 +24,49 @@ void secret_system_init(void) {
 bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
     // Handle secret mode keys if active
     if (secret_state.is_secret_mode_active) {
+        // Map fallback keycodes to their corresponding secret keycodes
+        uint16_t secret_keycode = 0;
         switch (keycode) {
-            case KC_Q: // SECRET_1 fallback
-                if (record->event.pressed) {
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    keyrecord_t fake_record = *record;
-                    process_secret_macro(SECRET_1, &fake_record);
-                }
-                secret_mode_deactivate();
-                layer_clear();
-                return false;
-
-            case KC_W: // SECRET_2 fallback
-                if (record->event.pressed) {
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    keyrecord_t fake_record = *record;
-                    process_secret_macro(SECRET_2, &fake_record);
-                }
-                secret_mode_deactivate();
-                layer_clear();
-                return false;
-
-            case KC_E: // SECRET_3 fallback
-                if (record->event.pressed) {
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    keyrecord_t fake_record = *record;
-                    process_secret_macro(SECRET_3, &fake_record);
-                }
-                secret_mode_deactivate();
-                layer_clear();
-                return false;
-
-            case KC_I: // SECRET_4 fallback
-                if (record->event.pressed) {
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    keyrecord_t fake_record = *record;
-                    process_secret_macro(SECRET_4, &fake_record);
-                }
-                secret_mode_deactivate();
-                layer_clear();
-                return false;
-
-            case KC_O: // SECRET_5 fallback
-                if (record->event.pressed) {
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    keyrecord_t fake_record = *record;
-                    process_secret_macro(SECRET_5, &fake_record);
-                }
-                secret_mode_deactivate();
-                layer_clear();
-                return false;
-
+            case KC_Q:
+                secret_keycode = SECRET_1;
+                break;
+            case KC_W:
+                secret_keycode = SECRET_2;
+                break;
+            case KC_E:
+                secret_keycode = SECRET_3;
+                break;
             case SECRET_1:
             case SECRET_2:
             case SECRET_3:
-            case SECRET_4:
-            case SECRET_5:
-                if (record->event.pressed) {
-                    // Call the actual secret function (defined in secrets.c)
-                    extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
-                    process_secret_macro(keycode, record);
-                }
-                // Always deactivate after any keypress in secret mode (one-shot behavior)
-                secret_mode_deactivate();
-                // Force clear all layers to return to BASE
-                layer_clear();
-                return false; // Consume the key
+                secret_keycode = keycode;
+                break;
+        }
 
-            default:
-                // Any other key pressed while in secret mode - deactivate and pass through
-                if (record->event.pressed) {
-                    // Only deactivate on key press, not key release
-                    secret_mode_deactivate();
+        // Handle secret keys (both direct and fallback)
+        if (secret_keycode != 0) {
+            handle_secret_key(secret_keycode, record);
+            return false; // Consume the key
+        }
 
-                    // Force clear all layers to return to BASE
-                    layer_clear();
+        // Any other key pressed while in secret mode - deactivate and pass through
+        if (record->event.pressed) {
+            // Only deactivate on key press, not key release
+            secret_mode_deactivate();
 
-                    return true; // Pass the key through normally
-                } else {
-                    // For key releases, ignore them if they happen shortly after activation
-                    // This prevents immediate deactivation from B/N releases or layer key releases
-                    uint16_t elapsed = timer_elapsed(secret_state.activation_time);
-                    if (elapsed < 500) { // Ignore releases within 500ms of activation
-                        return false;    // Consume the key release without deactivating
-                    }
-                    // After 500ms, key releases pass through normally without deactivating
-                    return true;
-                }
+            // Force clear all layers to return to BASE
+            layer_clear();
+
+            return true; // Pass the key through normally
+        } else {
+            // For key releases, ignore them if they happen shortly after activation
+            // This prevents immediate deactivation from B/N releases or layer key releases
+            uint16_t elapsed = timer_elapsed(secret_state.activation_time);
+            if (elapsed < 500) { // Ignore releases within 500ms of activation
+                return false;    // Consume the key release without deactivating
+            }
+            // After 500ms, key releases pass through normally without deactivating
+            return true;
         }
     }
 

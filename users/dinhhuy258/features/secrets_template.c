@@ -9,23 +9,21 @@
 // These are stored in program memory for better security
 // Replace these example values with your actual secrets
 const char secret_1[] PROGMEM = "your_password_here";
-const char secret_2[] PROGMEM = "your_second_password_here";  
+const char secret_2[] PROGMEM = "your_second_password_here";
 const char secret_3[] PROGMEM = "your_username_here";
-const char secret_4[] PROGMEM = "your_email@example.com";
-const char secret_5[] PROGMEM = "your_2fa_backup_code_here";
 
 bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     if (!record->event.pressed) {
         return true;
     }
-    
+
     // Clear any held modifiers before sending secrets
     uint8_t saved_mods = get_mods();
     clear_mods();
     clear_weak_mods();
-    
-    const char* secret_string = NULL;
-    
+
+    const char *secret_string = NULL;
+
     switch (keycode) {
         case SECRET_1:
             secret_string = secret_1;
@@ -36,25 +34,19 @@ bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
         case SECRET_3:
             secret_string = secret_3;
             break;
-        case SECRET_4:
-            secret_string = secret_4;
-            break;
-        case SECRET_5:
-            secret_string = secret_5;
-            break;
         default:
             set_mods(saved_mods); // Restore modifiers
             return false;
     }
-    
+
     if (secret_string != NULL) {
         // Send the secret string with a small delay between characters
         // This helps prevent detection and ensures reliable transmission
         send_string_with_delay_P(secret_string, 10);
     }
-    
+
     // Restore previous modifier state
     set_mods(saved_mods);
-    
+
     return false; // Consume the keycode
 }
