@@ -80,7 +80,7 @@ bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode
         case BACKSPACE:
             return layer_state_is(BASE) || layer_state_is(NUM) || layer_state_is(SYM);
         case SECRET_TRIGGER_COMBO:
-            return layer_state_is(WM); // Only trigger in WM layer
+            return layer_state_is(WM);
     }
 
     return true;
@@ -165,7 +165,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             break;
         case SECRET_TRIGGER_COMBO:
             if (pressed) {
-                // Directly activate secret layer - no sequence needed
                 extern void secret_mode_activate(void);
                 secret_mode_activate();
             }
