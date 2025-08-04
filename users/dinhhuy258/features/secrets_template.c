@@ -5,8 +5,6 @@
 #include "secrets.h"
 #include "definitions/keycodes.h"
 
-#ifndef NO_SECRETS
-
 // Define your secret strings here
 // These are stored in program memory for better security
 // Replace these example values with your actual secrets
@@ -60,5 +58,3 @@ bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     
     return false; // Consume the keycode
 }
-
-#endif // NO_SECRETS

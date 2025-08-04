@@ -7,14 +7,10 @@ SRC += $(USER_PATH)/features/taphold.c
 SRC += $(USER_PATH)/features/caps_word.c
 SRC += $(USER_PATH)/features/led_indicators.c
 
-# Secret macro system - conditionally compiled
-ifneq ($(strip $(NO_SECRETS)), yes)
-    SRC += $(USER_PATH)/features/secret_triggers.c
-    ifneq (,$(wildcard $(USER_PATH)/features/secrets.c))
-        SRC += $(USER_PATH)/features/secrets.c
-    endif
-else
-    OPT_DEFS += -DNO_SECRETS
+# Secret macro system
+SRC += $(USER_PATH)/features/secret_triggers.c
+ifneq (,$(wildcard $(USER_PATH)/features/secrets.c))
+    SRC += $(USER_PATH)/features/secrets.c
 endif
 
 # https://github.com/qmk/qmk_firmware/issues/21137#issuecomment-1577898767

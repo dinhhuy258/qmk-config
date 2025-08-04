@@ -17,4 +17,3 @@ compile_commands.json
 
 # Secret files - NEVER commit these!
 users/dinhhuy258/features/secrets.c
-users/dinhhuy258/features/secrets.h

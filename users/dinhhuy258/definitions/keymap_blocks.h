@@ -82,15 +82,13 @@
 #define ______________GAME_THUMB_RIGHT_____________       KC_ENT,          TO(BASE)
 #endif
 
-#ifndef NO_SECRETS
-// SECRET layer - only accessible through special triggers
+// SECRET layer - one-shot layer accessible through B+N combo in WM layer
 #define __________________SECRET_L1________________       SECRET_1,        SECRET_2,        SECRET_3,        XXXXXXX,         XXXXXXX
 #define __________________SECRET_L2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define __________________SECRET_L3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define _____________SECRET_THUMB_LEFT______________       KC_ESC,          XXXXXXX
+#define _____________SECRET_THUMB_LEFT______________       XXXXXXX,         XXXXXXX
 
-#define __________________SECRET_R1________________       XXXXXXX,         XXXXXXX,         SECRET_4,        SECRET_5,        SECRET_EMERGENCY_DISABLE
+#define __________________SECRET_R1________________       XXXXXXX,         XXXXXXX,         SECRET_4,        SECRET_5,        XXXXXXX
 #define __________________SECRET_R2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define __________________SECRET_R3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define _____________SECRET_THUMB_RIGHT_____________       XXXXXXX,         XXXXXXX
-#endif
