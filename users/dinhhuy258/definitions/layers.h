@@ -7,8 +7,8 @@ enum layers {
     SYM,
     NUM,
     WM,
+    SECRET,  // SECRET layer has higher priority than WM
 #ifdef GAME_LAYER_ENABLE
     GAME,
 #endif
-    SECRET,
 };
