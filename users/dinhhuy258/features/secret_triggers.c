@@ -2,7 +2,6 @@
 #include "definitions/layers.h"
 #include "definitions/keycodes.h"
 
-// Helper function to handle secret key press and cleanup
 static void handle_secret_key(uint16_t secret_keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         extern bool process_secret_macro(uint16_t keycode, keyrecord_t *record);
