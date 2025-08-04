@@ -165,17 +165,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             break;
         case SECRET_TRIGGER_COMBO:
             if (pressed) {
-#if defined(KEYBOARD_ergodox_ez)
-                // Quick LED flash to show combo was triggered
-                ergodox_right_led_1_on();
-                ergodox_right_led_2_on();
-                ergodox_right_led_3_on();
-                wait_ms(100);
-                ergodox_right_led_1_off();
-                ergodox_right_led_2_off();
-                ergodox_right_led_3_off();
-                wait_ms(100);
-#endif
                 // Directly activate secret layer - no sequence needed
                 extern void secret_mode_activate(void);
                 secret_mode_activate();
