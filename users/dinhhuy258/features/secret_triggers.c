@@ -31,6 +31,5 @@ void secret_mode_activate(void) {
 }
 
 void secret_mode_deactivate(void) {
-    layer_off(SECRET);
     layer_clear();
 }
