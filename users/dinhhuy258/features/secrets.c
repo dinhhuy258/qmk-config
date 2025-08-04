@@ -1,16 +1,8 @@
-// Template for secrets.c
-// Copy this file to secrets.c and modify with your actual secrets
-// DO NOT commit secrets.c to version control!
-
 #include "secrets.h"
 #include "definitions/keycodes.h"
 
-// Define your secret strings here
-// These are stored in program memory for better security
 // Replace these example values with your actual secrets
-const char secret_1[] PROGMEM = "your_password_here";
-const char secret_2[] PROGMEM = "your_second_password_here";
-const char secret_3[] PROGMEM = "your_username_here";
+const char secret_1[] PROGMEM = "secret_1";
 
 bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     if (!record->event.pressed) {
@@ -27,12 +19,6 @@ bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SECRET_1:
             secret_string = secret_1;
-            break;
-        case SECRET_2:
-            secret_string = secret_2;
-            break;
-        case SECRET_3:
-            secret_string = secret_3;
             break;
         default:
             set_mods(saved_mods); // Restore modifiers

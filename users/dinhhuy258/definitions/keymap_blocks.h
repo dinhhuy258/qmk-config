@@ -70,7 +70,7 @@
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
 #endif
 
-#define __________________SECRET_L1________________       SECRET_1,        SECRET_2,        SECRET_3,        XXXXXXX,         XXXXXXX
+#define __________________SECRET_L1________________       SECRET_1,        XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define __________________SECRET_L2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define __________________SECRET_L3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define _____________SECRET_THUMB_LEFT______________      XXXXXXX,         XXXXXXX

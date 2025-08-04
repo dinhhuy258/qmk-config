@@ -2,9 +2,8 @@
 
 #include QMK_KEYBOARD_H
 
-// Secret system state tracking
 typedef struct {
-    bool is_secret_mode_active;
+    bool     is_secret_mode_active;
     uint16_t activation_time;
 } secret_state_t;
 

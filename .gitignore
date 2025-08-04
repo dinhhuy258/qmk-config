@@ -14,6 +14,3 @@
 compile_commands.json
 .clangd/
 .cache/
-
-# Secret files - NEVER commit these!
-users/dinhhuy258/features/secrets.c

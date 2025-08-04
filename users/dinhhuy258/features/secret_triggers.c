@@ -30,15 +30,7 @@ bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
             case KC_Q:
                 secret_keycode = SECRET_1;
                 break;
-            case KC_W:
-                secret_keycode = SECRET_2;
-                break;
-            case KC_E:
-                secret_keycode = SECRET_3;
-                break;
             case SECRET_1:
-            case SECRET_2:
-            case SECRET_3:
                 secret_keycode = keycode;
                 break;
         }
