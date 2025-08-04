@@ -9,10 +9,6 @@
 
 bool switch_app_active = false;
 
-void keyboard_post_init_user(void) {
-    // No initialization needed for secret system
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // Process secret triggers first - they may consume the keycode
     if (!process_secret_triggers(keycode, record)) {
