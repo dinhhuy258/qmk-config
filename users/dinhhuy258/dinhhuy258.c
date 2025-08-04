@@ -13,10 +13,6 @@ void keyboard_post_init_user(void) {
     secret_system_init();
 }
 
-void housekeeping_task_user(void) {
-    secret_system_task();
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // Process secret triggers first - they may consume the keycode
     if (!process_secret_triggers(keycode, record)) {
