@@ -5,7 +5,7 @@
 #include "definitions/keyboard_config.h"
 #include "features/swapper.h"
 #include "features/led_indicators.h"
-#include "features/secret_triggers.h"
+#include "features/secrets.h"
 
 bool switch_app_active = false;
 
