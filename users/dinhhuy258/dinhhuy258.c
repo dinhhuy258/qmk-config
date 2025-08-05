@@ -10,10 +10,10 @@
 bool switch_app_active = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process secret triggers first - they may consume the keycode
     if (!process_secret_triggers(keycode, record)) {
         return false;
     }
+
     if (record->event.pressed) {
         static deferred_token token  = INVALID_DEFERRED_TOKEN;
         static report_mouse_t report = {0};
