@@ -8,18 +8,10 @@ const char secret_1[] PROGMEM = "secret_1";
 
 static const char *const secrets[] PROGMEM = {secret_1};
 
-bool process_secret_macro(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case SECRET_1 ... SECRET_1:
-            if (record->event.pressed) {
-                clear_mods();
-                clear_oneshot_mods();
-                send_string_with_delay_P(secrets[keycode - SECRET_1], MACRO_TIMER);
-            }
-            return false;
-    }
-
-    return true;
+void process_secret_macro(uint16_t keycode, keyrecord_t *record) {
+    clear_mods();
+    clear_oneshot_mods();
+    send_string_with_delay_P(secrets[keycode - SECRET_1], MACRO_TIMER);
 }
 
 bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
@@ -30,6 +22,7 @@ bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
                     process_secret_macro(SECRET_1, record);
                 }
                 secret_mode_deactivate();
+
                 return false; // Consume the key
         }
     }
