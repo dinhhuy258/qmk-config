@@ -15,7 +15,7 @@ void process_secret_macro(uint16_t keycode, keyrecord_t *record) {
 }
 
 void secret_mode_deactivate(void) {
-    layer_clear();
+    layer_move(BASE);
 }
 
 bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
@@ -35,6 +35,5 @@ bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
 }
 
 void secret_mode_activate(void) {
-    layer_clear();
-    layer_on(SECRET);
+    layer_move(SECRET);
 }
