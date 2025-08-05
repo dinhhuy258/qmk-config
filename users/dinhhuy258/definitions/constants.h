@@ -28,6 +28,8 @@
 #define MOUSE_CURSOR_OFFSET_FAST 42
 #define MOUSE_CURSOR_INTERVAL_FAST 16
 
+#define MACRO_TIMER 10 // ms
+
 // Default tapping term
 #ifndef CUSTOM_TAPPING_TERM
 #    define DEFAULT_TAPPING_TERM 200
