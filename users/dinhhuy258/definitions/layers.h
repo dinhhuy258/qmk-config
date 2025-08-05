@@ -7,6 +7,7 @@ enum layers {
     SYM,
     NUM,
     WM,
+    SECRET,
 #ifdef GAME_LAYER_ENABLE
     GAME,
 #endif

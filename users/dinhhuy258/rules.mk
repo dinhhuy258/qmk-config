@@ -6,6 +6,7 @@ SRC += $(USER_PATH)/features/swapper.c
 SRC += $(USER_PATH)/features/taphold.c
 SRC += $(USER_PATH)/features/caps_word.c
 SRC += $(USER_PATH)/features/led_indicators.c
+SRC += $(USER_PATH)/features/secrets.c
 
 # https://github.com/qmk/qmk_firmware/issues/21137#issuecomment-1577898767
 INTROSPECTION_KEYMAP_C = $(USER_PATH)/keymap_introspection.c

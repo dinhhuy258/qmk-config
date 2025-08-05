@@ -5,10 +5,15 @@
 #include "definitions/keyboard_config.h"
 #include "features/swapper.h"
 #include "features/led_indicators.h"
+#include "features/secrets.h"
 
 bool switch_app_active = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!process_secret_triggers(keycode, record)) {
+        return false;
+    }
+
     if (record->event.pressed) {
         static deferred_token token  = INVALID_DEFERRED_TOKEN;
         static report_mouse_t report = {0};

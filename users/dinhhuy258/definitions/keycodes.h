@@ -58,4 +58,5 @@ enum tapdance_keycodes {
 enum keycodes {
     SWITCH_APP = SAFE_RANGE, // Switch to next window (cmd-tab)
     JIGGLE,
+    SECRET_1,
 };
