@@ -14,6 +14,10 @@ void process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     send_string_with_delay_P(secrets[keycode - SECRET_1], MACRO_TIMER);
 }
 
+void secret_mode_deactivate(void) {
+    layer_clear();
+}
+
 bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
     if (layer_state_is(SECRET)) {
         switch (keycode) {
@@ -33,8 +37,4 @@ bool process_secret_triggers(uint16_t keycode, keyrecord_t *record) {
 void secret_mode_activate(void) {
     layer_clear();
     layer_on(SECRET);
-}
-
-void secret_mode_deactivate(void) {
-    layer_clear();
 }
