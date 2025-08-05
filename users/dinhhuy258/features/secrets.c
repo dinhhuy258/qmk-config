@@ -3,8 +3,15 @@
 #include "definitions/keycodes.h"
 #include "definitions/layers.h"
 
-// Replace these example values with your actual secrets
-const char secret_1[] PROGMEM = "secret_1";
+#if __has_include("secrets_config.h")
+#    include "secrets_config.h"
+#endif
+
+#ifndef SECRET_1_VALUE
+#    define SECRET_1_VALUE ""
+#endif
+
+const char secret_1[] PROGMEM = SECRET_1_VALUE;
 
 static const char *const secrets[] PROGMEM = {secret_1};
 

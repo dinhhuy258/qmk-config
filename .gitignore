@@ -14,3 +14,6 @@
 compile_commands.json
 .clangd/
 .cache/
+
+# Secrets configuration
+users/dinhhuy258/features/secrets_config.h
