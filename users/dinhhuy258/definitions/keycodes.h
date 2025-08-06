@@ -61,4 +61,6 @@ enum keycodes {
     SECRET_1,
     SECRET_2,
     SECRET_3,
+    SECRET_4,
+    SECRET_5,
 };

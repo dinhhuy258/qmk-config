@@ -10,7 +10,7 @@
 bool switch_app_active = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_secret_triggers(keycode, record)) {
+    if (!process_secret(keycode, record)) {
         return false;
     }
 

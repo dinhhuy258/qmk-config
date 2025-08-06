@@ -4,5 +4,5 @@
 
 extern const char secret_1[] PROGMEM;
 
-bool process_secret_triggers(uint16_t keycode, keyrecord_t *record);
+bool process_secret(uint16_t keycode, keyrecord_t *record);
 void secret_mode_activate(void);
