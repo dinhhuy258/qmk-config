@@ -22,14 +22,18 @@
 #ifndef SECRET_5_VALUE
 #    define SECRET_5_VALUE ""
 #endif
+#ifndef SECRET_6_VALUE
+#    define SECRET_6_VALUE ""
+#endif
 
 const char secret_1[] PROGMEM = SECRET_1_VALUE;
 const char secret_2[] PROGMEM = SECRET_2_VALUE;
 const char secret_3[] PROGMEM = SECRET_3_VALUE;
 const char secret_4[] PROGMEM = SECRET_4_VALUE;
 const char secret_5[] PROGMEM = SECRET_5_VALUE;
+const char secret_6[] PROGMEM = SECRET_6_VALUE;
 
-static const char *const secrets[] PROGMEM = {secret_1, secret_2, secret_3, secret_4, secret_5};
+static const char *const secrets[] PROGMEM = {secret_1, secret_2, secret_3, secret_4, secret_5, secret_6};
 
 void process_secret_macro(uint16_t keycode, keyrecord_t *record) {
     clear_mods();
@@ -42,7 +46,7 @@ void secret_mode_deactivate(void) {
 }
 
 bool process_secret(uint16_t keycode, keyrecord_t *record) {
-    if (keycode < SECRET_1 || keycode > SECRET_5) {
+    if (keycode < SECRET_1 || keycode > SECRET_6) {
         return true; // Not a secret keycode, pass through normally
     }
 
