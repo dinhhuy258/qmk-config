@@ -1,5 +1,5 @@
-#include "../definitions/keycodes.h"
-#include "../definitions/constants.h"
+#include "definitions/keycodes.h"
+#include "definitions/constants.h"
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

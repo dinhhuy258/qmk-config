@@ -1,6 +1,6 @@
 #include "bongocat.h"
 #include "dinhhuy258.h"
-#include "../definitions/constants.h"
+#include "definitions/constants.h"
 #include "animation_framework.h"
 
 static const char PROGMEM bongocat_taps[BONGOCAT_ANIM_FRAMES][BONGOCAT_ANIM_SIZE] = {

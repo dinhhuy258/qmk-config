@@ -1,6 +1,6 @@
 #include "luna.h"
 #include "dinhhuy258.h"
-#include "../definitions/constants.h"
+#include "definitions/constants.h"
 #include "animation_framework.h"
 
 static const char PROGMEM luna_sits[LUNA_ANIM_FRAMES][LUNA_ANIM_SIZE] = {{
