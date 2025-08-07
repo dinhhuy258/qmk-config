@@ -14,7 +14,7 @@
 #define __________________BASE_R1__________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
 #define __________________BASE_R2__________________       HYPR_T(KC_H),    LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
 #define __________________BASE_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________BASE_THUMB_RIGHT_____________       LT(NUM, KC_ENT), LT(SYM, KC_BSPC)
+#define ______________BASE_THUMB_RIGHT_____________       LT(NUM, KC_ENT), LT(SYM, KC_NO)
 
 #define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      XXXXXXX,         XXXXXXX
 #define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
@@ -44,7 +44,7 @@
 #define ___________________SYM_R1__________________       KC_AT,           KC_PLUS,         KC_UNDS,         KC_PIPE,         KC_COLON
 #define ___________________SYM_R2__________________       KC_EXLM,         KC_EQL,          KC_MINS,         KC_BSLS,         KC_SCLN
 #define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________SYM_THUMB_RIGHT______________       _______,         _______
+#define ______________SYM_THUMB_RIGHT______________       KC_BSPC,         _______
 
 #define ___________________NUM_L1__________________       XXXXXXX,         KC_7,            KC_8,            KC_9,            XXXXXXX
 #define ___________________NUM_L2__________________       XXXXXXX,         KC_4,            KC_5,            KC_6,            XXXXXXX

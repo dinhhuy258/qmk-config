@@ -2,7 +2,7 @@
 
 #if defined(KEYBOARD_ergodox_ez)
 #    include "ergodox_ez.h"
-#    include "../definitions/layers.h"
+#    include "definitions/layers.h"
 
 void update_led_indicators(layer_state_t state) {
     uint8_t layer = biton(state);

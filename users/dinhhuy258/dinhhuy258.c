@@ -6,10 +6,15 @@
 #include "features/swapper.h"
 #include "features/led_indicators.h"
 #include "features/secrets.h"
+#include "features/leader.h"
 
 bool switch_app_active = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!process_leader_key(keycode, record)) {
+        return false;
+    }
+
     if (!process_secret(keycode, record)) {
         return false;
     }
