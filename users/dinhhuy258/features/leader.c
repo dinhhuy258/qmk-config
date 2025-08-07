@@ -1,6 +1,7 @@
 #include "leader.h"
 #include "definitions/keycodes.h"
 #include "definitions/layers.h"
+#include "features/secrets.h"
 
 bool process_leader_key(uint16_t keycode, keyrecord_t *record) {
     if (keycode != LT(SYM, KC_NO)) {
@@ -17,7 +18,5 @@ bool process_leader_key(uint16_t keycode, keyrecord_t *record) {
 }
 
 void leader_end_user(void) {
-    if (leader_sequence_one_key(KC_Q)) {
-        SEND_STRING("Hello world");
-    }
+    process_secrets();
 }

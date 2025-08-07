@@ -70,15 +70,6 @@
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
 #endif
 
-#define __________________SECRET_L1________________       SECRET_1,        SECRET_2,        SECRET_3,        SECRET_4,        XXXXXXX
-#define __________________SECRET_L2________________       SECRET_5,        SECRET_6,        XXXXXXX,         XXXXXXX,         XXXXXXX
-#define __________________SECRET_L3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ______________SECRET_THUMB_LEFT____________       _______,         _______
-
-#define __________________SECRET_R1________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define __________________SECRET_R2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define __________________SECRET_R3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ______________SECRET_THUMB_RIGHT___________       _______,         _______
 
 #ifdef GAME_LAYER_ENABLE
 #define ___________________GAME_L1_________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T

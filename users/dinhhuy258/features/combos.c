@@ -14,7 +14,6 @@ enum combos {
     SLASH,
     LEFT_PAREN,
     RIGHT_PAREN,
-    SECRET_TRIGGER_COMBO,
 };
 
 /*
@@ -40,7 +39,6 @@ const uint16_t PROGMEM asterisk_combo[]       = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM slash_combo[]          = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM left_paren_combo[]     = {LSFT_T(KC_F), HYPR_T(KC_G), COMBO_END};
 const uint16_t PROGMEM right_paren_combo[]    = {HYPR_T(KC_H), LSFT_T(KC_J), COMBO_END};
-const uint16_t PROGMEM secret_trigger_combo[] = {KC_B, KC_N, COMBO_END};
 
 // clang-format off
 combo_t key_combos[] = {
@@ -59,7 +57,6 @@ combo_t key_combos[] = {
     [SLASH] = COMBO_ACTION(slash_combo),
     [LEFT_PAREN] = COMBO_ACTION(left_paren_combo),
     [RIGHT_PAREN] = COMBO_ACTION(right_paren_combo),
-    [SECRET_TRIGGER_COMBO] = COMBO_ACTION(secret_trigger_combo),
 };
 // clang-format on
 
@@ -79,8 +76,6 @@ bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode
             return layer_state_is(NUM);
         case BACKSPACE:
             return layer_state_is(BASE) || layer_state_is(NUM) || layer_state_is(SYM);
-        case SECRET_TRIGGER_COMBO:
-            return layer_state_is(WM);
     }
 
     return true;
@@ -161,12 +156,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case RIGHT_PAREN:
             if (pressed) {
                 tap_code16(LSFT(KC_0));
-            }
-            break;
-        case SECRET_TRIGGER_COMBO:
-            if (pressed) {
-                extern void secret_mode_activate(void);
-                secret_mode_activate();
             }
             break;
     }
