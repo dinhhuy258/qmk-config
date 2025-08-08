@@ -26,23 +26,19 @@
 #    define SECRET_SM_VALUE ""
 #endif
 
-void process_secrets(void) {
-    if (leader_sequence_two_keys(KC_S, KC_S)) {
-        send_string_with_delay(SECRET_SS_VALUE, TAP_CODE_DELAY);
+bool process_secrets(void) {
+    static const struct {
+        uint16_t    key;
+        const char* value;
+    } secret_mappings[] = {{KC_S, SECRET_SS_VALUE}, {KC_A, SECRET_SA_VALUE}, {KC_D, SECRET_SD_VALUE}, {KC_P, SECRET_SP_VALUE}, {KC_G, SECRET_SG_VALUE}, {KC_M, SECRET_SM_VALUE}};
+
+    for (int i = 0; i < sizeof(secret_mappings) / sizeof(secret_mappings[0]); i++) {
+        if (leader_sequence_two_keys(KC_S, secret_mappings[i].key)) {
+            send_string_with_delay(secret_mappings[i].value, TAP_CODE_DELAY);
+
+            return true;
+        }
     }
-    if (leader_sequence_two_keys(KC_S, KC_A)) {
-        send_string_with_delay(SECRET_SA_VALUE, TAP_CODE_DELAY);
-    }
-    if (leader_sequence_two_keys(KC_S, KC_D)) {
-        send_string_with_delay(SECRET_SD_VALUE, TAP_CODE_DELAY);
-    }
-    if (leader_sequence_two_keys(KC_S, KC_P)) {
-        send_string_with_delay(SECRET_SP_VALUE, TAP_CODE_DELAY);
-    }
-    if (leader_sequence_two_keys(KC_S, KC_G)) {
-        send_string_with_delay(SECRET_SG_VALUE, TAP_CODE_DELAY);
-    }
-    if (leader_sequence_two_keys(KC_S, KC_M)) {
-        send_string_with_delay(SECRET_SM_VALUE, TAP_CODE_DELAY);
-    }
+
+    return false;
 }

@@ -2,4 +2,4 @@
 
 #include QMK_KEYBOARD_H
 
-void process_secrets(void);
+bool process_secrets(void);
