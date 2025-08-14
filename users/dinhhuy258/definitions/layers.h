@@ -5,7 +5,6 @@ enum layers {
     NAV,
     MOU,
     SYM,
-    NUM,
     WM,
 #ifdef GAME_LAYER_ENABLE
     GAME,
