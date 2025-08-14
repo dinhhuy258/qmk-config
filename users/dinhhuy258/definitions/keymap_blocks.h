@@ -14,7 +14,7 @@
 #define __________________BASE_R1__________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
 #define __________________BASE_R2__________________       HYPR_T(KC_H),    LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
 #define __________________BASE_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________BASE_THUMB_RIGHT_____________       LT(NUM, KC_ENT), LT(SYM, KC_NO)
+#define ______________BASE_THUMB_RIGHT_____________       KC_ENT,          LT(SYM, KC_NO)
 
 #define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      XXXXXXX,         XXXXXXX
 #define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
@@ -36,25 +36,15 @@
 #define ___________________MOU_R3__________________       WHEEL_LEFT,      WHEEL_DOWN,      WHEEL_UP,        WHEEL_RIGHT,     LGUI(KC_GRAVE)
 #define ______________MOU_THUMB_RIGHT______________       LEFT_CLICK,      RIGHT_CLICK
 
-#define ___________________SYM_L1__________________       KC_AMPR,         KC_ASTR,         KC_LCBR,         KC_RCBR,         KC_GRV
-#define ___________________SYM_L2__________________       KC_CIRC,         KC_DLR,          KC_LPRN,         KC_RPRN,         KC_TILD
-#define ___________________SYM_L3__________________       KC_PERC,         KC_HASH,         KC_LBRC,         KC_RBRC,         KC_QUES
+#define ___________________SYM_L1__________________       KC_AMPR,         KC_7,            KC_8,            KC_9,            KC_GRV
+#define ___________________SYM_L2__________________       KC_DLR,          KC_4,            KC_5,            LSFT_T(KC_6),    KC_TILD
+#define ___________________SYM_L3__________________       KC_0,            KC_1,            KC_2,            KC_3,            XXXXXXX
 #define ______________SYM_THUMB_LEFT_______________       _______,         _______
 
-#define ___________________SYM_R1__________________       KC_AT,           KC_PLUS,         KC_UNDS,         KC_PIPE,         KC_COLON
+#define ___________________SYM_R1__________________       KC_AT,           KC_ASTR,         KC_HASH,         KC_PERC,         KC_COLON
 #define ___________________SYM_R2__________________       KC_EXLM,         KC_EQL,          KC_MINS,         KC_BSLS,         KC_SCLN
 #define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
 #define ______________SYM_THUMB_RIGHT______________       KC_BSPC,         _______
-
-#define ___________________NUM_L1__________________       XXXXXXX,         KC_7,            KC_8,            KC_9,            XXXXXXX
-#define ___________________NUM_L2__________________       XXXXXXX,         KC_4,            KC_5,            KC_6,            XXXXXXX
-#define ___________________NUM_L3__________________       KC_0,            KC_1,            KC_2,            KC_3,            XXXXXXX
-#define ______________NUM_THUMB_LEFT_______________       _______,         _______
-
-#define ___________________NUM_R1__________________       XXXXXXX,         VIM_PREFIX,      XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ___________________NUM_R2__________________       XXXXXXX,         KC_LSFT,         KC_LCTL,         KC_LOPT,         KC_LGUI
-#define ___________________NUM_R3__________________       XXXXXXX,         TMUX_PREFIX,     KC_COMM,         KC_DOT,          XXXXXXX
-#define ______________NUM_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
 #define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_MODE_RESIZE,  WM_MODE_MOVE,    WM_L_TILES,      WM_L_ACCORDION

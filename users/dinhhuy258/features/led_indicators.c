@@ -18,16 +18,12 @@ void update_led_indicators(layer_state_t state) {
         case SYM:
             ergodox_right_led_2_on();
             break;
-        case NUM:
-            ergodox_right_led_3_on();
-            break;
         case MOU:
-            ergodox_right_led_1_on();
-            ergodox_right_led_2_on();
+            ergodox_right_led_3_on();
             break;
         case WM:
             ergodox_right_led_1_on();
-            ergodox_right_led_3_on();
+            ergodox_right_led_2_on();
             break;
         default:
             break;
