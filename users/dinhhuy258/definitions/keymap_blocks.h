@@ -60,7 +60,6 @@
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
 #endif
 
-
 #ifdef GAME_LAYER_ENABLE
 #define ___________________GAME_L1_________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
 #define ___________________GAME_L2_________________       KC_A,            KC_S,            KC_D,            KC_F,            KC_G
