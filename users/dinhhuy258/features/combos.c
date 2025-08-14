@@ -9,7 +9,6 @@ enum combos {
     PASTE,
     UNDO,
     CARET,
-    DOLLAR,
     LEFT_BRACE,
     LEFT_PAREN,
     LEFT_BRACKET,
@@ -36,7 +35,6 @@ const uint16_t PROGMEM copy_combo[]          = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM paste_combo[]         = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM undo_combo[]          = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM caret_combo[]         = {LGUI_T(KC_A), LOPT_T(KC_S), COMBO_END};
-const uint16_t PROGMEM dollar_combo[]        = {LGUI_T(KC_SCLN), LALT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM left_brace_combo[]    = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM left_paren_combo[]    = {LSFT_T(KC_F), HYPR_T(KC_G), COMBO_END};
 const uint16_t PROGMEM left_bracket_combo[]  = {KC_V, KC_B, COMBO_END};
@@ -56,7 +54,6 @@ combo_t key_combos[] = {
     [PASTE] = COMBO_ACTION(paste_combo),
     [UNDO] = COMBO_ACTION(undo_combo),
     [CARET] = COMBO_ACTION(caret_combo),
-    [DOLLAR] = COMBO_ACTION(dollar_combo),
     [LEFT_BRACE] = COMBO_ACTION(left_brace_combo),
     [LEFT_PAREN] = COMBO_ACTION(left_paren_combo),
     [LEFT_BRACKET] = COMBO_ACTION(left_bracket_combo),
@@ -76,7 +73,6 @@ bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode
         case BACKSPACE:
             return layer_state_is(BASE) || layer_state_is(SYM);
         case CARET:
-        case DOLLAR:
         case LEFT_BRACE:
         case LEFT_PAREN:
         case LEFT_BRACKET:
@@ -139,11 +135,6 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         case CARET:
             if (pressed) {
                 tap_code16(LSFT(KC_6));
-            }
-            break;
-        case DOLLAR:
-            if (pressed) {
-                tap_code16(LSFT(KC_4));
             }
             break;
         case LEFT_BRACE:

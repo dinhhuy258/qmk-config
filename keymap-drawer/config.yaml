@@ -1,76 +1,185 @@
 layout:
-  qmk_keyboard: corne_rotated
-  layout_name: LAYOUT_split_3x5_3
+    qmk_keyboard: corne_rotated
+    layout_name: LAYOUT_split_3x5_3
 parse_config:
-  mark_alternate_layer_activators: false
-  sticky_label: "sticky"
-  toggle_label: "toggle"
+    mark_alternate_layer_activators: false
+    sticky_label: "sticky"
+    toggle_label: "toggle"
 layers:
-  BASE:
-    - [Q, W, E, R, T, Y, U, I, O, P]
-    - [{h: Gui, t: A}, {h: Alt, t: S}, {h: Ctrl, t: D}, {h: Shift, t: F}, {h: Hyper, t: G}, {h: Hyper, t: H}, {h: Shift, t: J}, {h: Ctrl, t: K}, {h: Alt, t: L}, {h: Gui, t: ";"}]
-    - [Z, X, C, V, B, N, M, ",", ., /]
-    - null
-    - {h: NAV, t: Esc}
-    - {h: MOU, t: Space}
-    - Enter
-    - {h: SYM, t: BSpace}
-    - null
-  NAV:
-    - ["$$tabler:brightness-down$$", "$$tabler:brightness-up$$", "Screenshot", null, null, null, null, null, null, "Switch app"]
-    - ["Gui", "Alt", "Ctrl", "Shift", null, "←", "↓", "↑", "→", "Switch app"]
-    - ["$$tabler:volume-2$$", "$$tabler:volume$$", "$$tabler:volume-off$$", "Tmux Prefix", null, "Nav left", "Vim left", "Vim right", "Nav right", "Switch window"]
-    - null
-    - {type: held}
-    - null
-    - null
-    - null
-    - null
-  MOU:
-    - [null, null, "Mouse Min", "Mouse Max", null, null, "Click hint", "Mouse hint", "Screen hint", "Switch app"]
-    - ["Gui", "Alt", "Ctrl", "Shift", null, "Mouse ←", "Mouse ↓", "Mouse ↑", "Mouse →", "Switch app"]
-    - [null, null, null, null, "Jiggle", "Scroll ←", "Scroll ↓", "Scroll ↑", "Scroll →", "Switch window"]
-    - null
-    - null
-    - {type: held}
-    - "Left click"
-    - "Right click"
-    - null
-  SYM:
-    - ["&", "7", "8", "9", "`", "@", "Vim Prefix", "#", "%", ":"]
-    - ["$", "4", "5", {h: "Shift", t: "6"}, "~", "!", "Shift", "Ctrl", "Alt", "Gui"]
-    - ["0", "1", "2", "3", null, "'", "Tmux Prefix", ",", ".", "/"]
-    - null
-    - null
-    - null
-    - null
-    - {type: held}
-    - null
-  WM:
-    - ["WS 1", "WS 2", "WS 3", "WS 4", "WS 5", "→WS 1", "→WS 2", "→WS 3", "→WS 4", "→WS 5"]
-    - ["Fullscreen", "Resize", "Move", "Tiles", "Accordion", "Focus ←", "Focus ↓", "Focus ↑", "Focus →", "Float"]
-    - ["Join", null, "Close", null, null, null, "Next Monitor", null, null, null]
-    - null
-    - {type: held}
-    - "Reset"
-    - null
-    - {type: held}
-    - null
+    BASE:
+        - [Q, W, E, R, T, Y, U, I, O, P]
+        - [
+              { h: Gui, t: A },
+              { h: Alt, t: S },
+              { h: Ctrl, t: D },
+              { h: Shift, t: F },
+              { h: Hyper, t: G },
+              { h: Hyper, t: H },
+              { h: Shift, t: J },
+              { h: Ctrl, t: K },
+              { h: Alt, t: L },
+              { h: Gui, t: ";" },
+          ]
+        - [Z, X, C, V, B, N, M, ",", ., /]
+        - null
+        - { h: NAV, t: Esc }
+        - { h: MOU, t: Space }
+        - Enter
+        - { h: SYM, t: "Leader" }
+        - null
+    NAV:
+        - [
+              "$$tabler:brightness-down$$",
+              "$$tabler:brightness-up$$",
+              "Screenshot",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "Switch app",
+          ]
+        - [
+              "Gui",
+              "Alt",
+              "Ctrl",
+              "Shift",
+              null,
+              "←",
+              "↓",
+              "↑",
+              "→",
+              "Switch app",
+          ]
+        - [
+              "$$tabler:volume-2$$",
+              "$$tabler:volume$$",
+              "$$tabler:volume-off$$",
+              "Tmux Prefix",
+              null,
+              "Nav left",
+              "Vim left",
+              "Vim right",
+              "Nav right",
+              "Switch window",
+          ]
+        - null
+        - { type: held }
+        - null
+        - null
+        - null
+        - null
+    MOU:
+        - [
+              null,
+              null,
+              "Mouse Min",
+              "Mouse Max",
+              null,
+              null,
+              "Click hint",
+              "Mouse hint",
+              "Screen hint",
+              "Switch app",
+          ]
+        - [
+              "Gui",
+              "Alt",
+              "Ctrl",
+              "Shift",
+              null,
+              "Mouse ←",
+              "Mouse ↓",
+              "Mouse ↑",
+              "Mouse →",
+              "Switch app",
+          ]
+        - [
+              null,
+              null,
+              null,
+              null,
+              "Jiggle",
+              "Scroll ←",
+              "Scroll ↓",
+              "Scroll ↑",
+              "Scroll →",
+              "Switch window",
+          ]
+        - null
+        - null
+        - { type: held }
+        - "Left click"
+        - "Right click"
+        - null
+    SYM:
+        - ["&", "7", "8", "9", "`", "@", "*", "#", "%", ":"]
+        - ["$", "4", "5", { h: "Shift", t: "6" }, "~", "!", "=", "-", "\\", ";"]
+        - ["0", "1", "2", "3", null, "'", '"', ",", ".", "/"]
+        - null
+        - null
+        - null
+        - "Backspace"
+        - { type: held }
+        - null
+    WM:
+        - [
+              "WS 1",
+              "WS 2",
+              "WS 3",
+              "WS 4",
+              "WS 5",
+              "→WS 1",
+              "→WS 2",
+              "→WS 3",
+              "→WS 4",
+              "→WS 5",
+          ]
+        - [
+              "Fullscreen",
+              "Resize",
+              "Move",
+              "Tiles",
+              "Accordion",
+              "Focus ←",
+              "Focus ↓",
+              "Focus ↑",
+              "Focus →",
+              "Float",
+          ]
+        - [
+              "Join",
+              null,
+              "Close",
+              null,
+              null,
+              null,
+              "Next Monitor",
+              null,
+              null,
+              null,
+          ]
+        - null
+        - { type: held }
+        - "Reset"
+        - null
+        - { type: held }
+        - null
 combos:
-    - { p: [0, 1], k: ":q!", l: ["BASE"] }                       # VIM_QUIT (Q+W)
-    - { p: [20, 29], k: "Input Source", l: ["BASE"] }           # INPUT_SOURCE (Z+/)
-    - { p: [10, 19], k: "Caps Word", l: ["BASE"] }              # CAPS_WORD (A+;)
-    - { p: [11, 12], k: "Tab", l: ["BASE"] }                    # TAB (S+D)
+    - { p: [0, 1], k: ":q!", l: ["BASE"] } # VIM_QUIT (Q+W)
+    - { p: [20, 29], k: "Input Source", l: ["BASE"] } # INPUT_SOURCE (Z+/)
+    - { p: [10, 19], k: "Caps Word", l: ["BASE"] } # CAPS_WORD (A+;)
+    - { p: [11, 12], k: "Tab", l: ["BASE"] } # TAB (S+D)
     - { p: [17, 18], k: "Backspace", l: ["BASE", "SYM"] } # BACKSPACE (K+L)
-    - { p: [20, 21], k: "Undo", l: ["BASE"] }                      # UNDO (Z+X)
-    - { p: [21, 23], k: "Cut", l: ["BASE"] }                       # CUT (X+V)
-    - { p: [21, 22], k: "Copy", l: ["BASE"] }                      # COPY (X+C)
-    - { p: [22, 23], k: "Paste", l: ["BASE"] }                     # PASTE (C+V)
-    - { p: [10, 11], k: "^", l: ["SYM"] }                        # CARET (A+S)
-    - { p: [18, 19], k: "$", l: ["SYM"] }                        # DOLLAR (L+;)
-    - { p: [3, 4], k: "{", l: ["SYM"] }                          # LEFT_BRACE (R+T)
-    - { p: [13, 14], k: "(", l: ["SYM"] }                        # LEFT_PAREN (F+G)
-    - { p: [23, 24], k: "[", l: ["SYM"] }                        # LEFT_BRACKET (V+B)
-    - { p: [5, 6], k: "}", l: ["SYM"] }                          # RIGHT_BRACE (Y+U)
-    - { p: [15, 16], k: ")", l: ["SYM"] }                        # RIGHT_PAREN (H+J)
-    - { p: [25, 26], k: "]", l: ["SYM"] }                        # RIGHT_BRACKET (N+M)
+    - { p: [20, 21], k: "Undo", l: ["BASE"] } # UNDO (Z+X)
+    - { p: [21, 23], k: "Cut", l: ["BASE"] } # CUT (X+V)
+    - { p: [21, 22], k: "Copy", l: ["BASE"] } # COPY (X+C)
+    - { p: [22, 23], k: "Paste", l: ["BASE"] } # PASTE (C+V)
+    - { p: [10, 11], k: "^", l: ["SYM"] } # CARET (A+S)
+    - { p: [3, 4], k: "{", l: ["SYM"] } # LEFT_BRACE (R+T)
+    - { p: [13, 14], k: "(", l: ["SYM"] } # LEFT_PAREN (F+G)
+    - { p: [23, 24], k: "[", l: ["SYM"] } # LEFT_BRACKET (V+B)
+    - { p: [5, 6], k: "}", l: ["SYM"] } # RIGHT_BRACE (Y+U)
+    - { p: [15, 16], k: ")", l: ["SYM"] } # RIGHT_PAREN (H+J)
+    - { p: [25, 26], k: "]", l: ["SYM"] } # RIGHT_BRACKET (N+M)
