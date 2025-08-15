@@ -42,7 +42,7 @@
 #define ______________SYM_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________SYM_R1__________________       KC_AT,           KC_ASTR,         KC_HASH,         KC_PERC,         KC_COLON
-#define ___________________SYM_R2__________________       KC_EXLM,         KC_EQL,          KC_MINS,         KC_BSLS,         KC_SCLN
+#define ___________________SYM_R2__________________       KC_EXLM,         LSFT_T(KC_EQL),  KC_MINS,         KC_BSLS,         KC_SCLN
 #define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
 #define ______________SYM_THUMB_RIGHT______________       KC_BSPC,         _______
 
