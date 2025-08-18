@@ -23,3 +23,15 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, u
     // Otherwise defer to the opposite hands rule.
     return get_chordal_hold_default(tap_hold_record, other_record);
 }
+
+bool get_permissive_hold(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case HYPR_T(KC_G):
+        case HYPR_T(KC_H):
+            // Do not select the hold action when another key is tapped.
+            return false;
+        default:
+            // Immediately select the hold action when another key is tapped.
+            return true;
+    }
+}
