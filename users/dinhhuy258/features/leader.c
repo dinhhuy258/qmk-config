@@ -19,6 +19,9 @@ static void send_tmux_key(uint16_t key) {
     register_code(KC_F);
     unregister_code(KC_F);
     unregister_code(KC_LCTL);
+    if (key == KC_NO) {
+        return;
+    }
     wait_ms(10);
     register_code(key);
     unregister_code(key);
@@ -41,10 +44,17 @@ void process_leader_tmux_keys(void) {
     static const struct {
         uint16_t second_key;
         uint16_t target_key;
-    } tmux_keys[] = {{KC_L, KC_BSLS}, {KC_K, KC_MINS}, {KC_ENT, KC_ENT}, {KC_D, KC_COMM}, {KC_U, KC_DOT}, {KC_W, KC_W}, {KC_T, KC_T}};
+    } tmux_keys[] = {{KC_F, KC_NO},    // Tmux prefix
+                     {KC_V, KC_BSLS},  // Vertical split
+                     {KC_H, KC_MINS},  // Horizontal split
+                     {KC_ENT, KC_ENT}, // Enter copy mode
+                     {KC_D, KC_COMM},  // Swap panel -D
+                     {KC_U, KC_DOT},   // Swap panel -U
+                     {KC_W, KC_W},     // Delete panel
+                     {KC_T, KC_T}};    // New panel
 
     for (int i = 0; i < sizeof(tmux_keys) / sizeof(tmux_keys[0]); i++) {
-        if (leader_sequence_three_keys(KC_V, tmux_keys[i].second_key, KC_NO)) {
+        if (leader_sequence_three_keys(KC_F, tmux_keys[i].second_key, KC_NO)) {
             send_tmux_key(tmux_keys[i].target_key);
 
             return;
