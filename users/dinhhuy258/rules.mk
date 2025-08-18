@@ -9,6 +9,7 @@ SRC += $(USER_PATH)/features/led_indicators.c
 SRC += $(USER_PATH)/features/secrets.c
 SRC += $(USER_PATH)/features/leader.c
 SRC += $(USER_PATH)/features/custom_shift_keys.c
+SRC += $(USER_PATH)/features/mouse_jiggler.c
 
 # https://github.com/qmk/qmk_firmware/issues/21137#issuecomment-1577898767
 INTROSPECTION_KEYMAP_C = $(USER_PATH)/keymap_introspection.c
