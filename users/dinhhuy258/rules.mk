@@ -3,7 +3,7 @@ include $(USER_PATH)/oled/rules.mk
 SRC += $(USER_PATH)/dinhhuy258.c
 SRC += $(USER_PATH)/definitions/keyboard_config.c
 SRC += $(USER_PATH)/features/swapper.c
-SRC += $(USER_PATH)/features/taphold.c
+SRC += $(USER_PATH)/features/tap_hold.c
 SRC += $(USER_PATH)/features/caps_word.c
 SRC += $(USER_PATH)/features/led_indicators.c
 SRC += $(USER_PATH)/features/secrets.c
