@@ -51,7 +51,9 @@ void process_leader_tmux_keys(void) {
                      {KC_D, KC_COMM},  // Swap panel -D
                      {KC_U, KC_DOT},   // Swap panel -U
                      {KC_W, KC_W},     // Delete panel
-                     {KC_T, KC_T}};    // New panel
+                     {KC_T, KC_T},     // New panel
+                     {KC_J, KC_J},     // tmux-jump
+                     {KC_O, KC_U}};    // tmux-urlview
 
     for (int i = 0; i < sizeof(tmux_keys) / sizeof(tmux_keys[0]); i++) {
         if (leader_sequence_three_keys(KC_F, tmux_keys[i].second_key, KC_NO)) {
