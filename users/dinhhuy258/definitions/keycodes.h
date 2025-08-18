@@ -48,8 +48,8 @@
 #define WM_L_TILES LOPT(LCTL(LSFT(KC_G)))
 #define WM_MODE_JOIN LOPT(LCTL(LSFT(KC_Z)))
 
-// Tapdance keycodes
-enum tapdance_keycodes {
+// Tap dance keycodes
+enum tap_dance_keycodes {
     TD_SWITCH_APP,
     TD_RESET,
 };
