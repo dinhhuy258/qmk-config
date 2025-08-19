@@ -14,9 +14,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
 bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, uint16_t other_keycode, keyrecord_t* other_record) {
     // Exceptionally allow some one-handed chords for thumb keys.
     switch (tap_hold_keycode) {
-        case LT(SYM, KC_NO):
         case LT(NAV, KC_ESC):
         case LT(MOU, KC_SPC):
+        case LT(SYM, KC_NO):
+        case LT(SHORTCUT, KC_ENT):
             return true;
     }
 
