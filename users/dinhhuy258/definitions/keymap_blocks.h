@@ -61,9 +61,9 @@
 #endif
 
 #define ________________SHORTCUT_L1________________       HYPR(KC_Q),      HYPR(KC_W),      HYPR(KC_E),      HYPR(KC_R),      XXXXXXX
-#define ________________SHORTCUT_L2________________       HYPR(KC_A),      HYPR(KC_S),      HYPR(KC_D),      HYPR(KC_F),      XXXXXXX
+#define ________________SHORTCUT_L2________________       HYPR(KC_A),      HYPR(KC_S),      HYPR(KC_D),      HYPR(KC_F),      HYPR(KC_G)
 #define ________________SHORTCUT_L3________________       HYPR(KC_Z),      XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
-#define ____________SHORTCUT_THUMB_LEFT____________       _______,         HYPR(KC_SPC)
+#define ____________SHORTCUT_THUMB_LEFT____________       _______,         _______
 
 #define ________________SHORTCUT_R1________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
 #define ________________SHORTCUT_R2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
