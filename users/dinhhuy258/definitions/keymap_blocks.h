@@ -16,9 +16,9 @@
 #define __________________BASE_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
 #define ______________BASE_THUMB_RIGHT_____________       LT(SHORTCUT, KC_ENT), LT(SYM, KC_NO)
 
-#define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      XXXXXXX,         XXXXXXX
-#define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
-#define ___________________NAV_L3__________________       KC_VOLD,         KC_VOLU,         KC_MUTE,         XXXXXXX,         XXXXXXX
+#define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      ZOOM_OUT,        ZOOM_IN
+#define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         KC_F12
+#define ___________________NAV_L3__________________       KC_VOLD,         KC_VOLU,         KC_MUTE,         ZOOM_RESET,      XXXXXXX
 #define ______________NAV_THUMB_LEFT_______________       _______,         _______
 
 #define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         TD(TD_SWITCH_APP)

@@ -47,6 +47,9 @@
 #define WM_L_ACCORDION LOPT(LCTL(LSFT(KC_F)))
 #define WM_L_TILES LOPT(LCTL(LSFT(KC_G)))
 #define WM_MODE_JOIN LOPT(LCTL(LSFT(KC_Z)))
+#define ZOOM_OUT LGUI(KC_MINS)
+#define ZOOM_IN LGUI(KC_EQL)
+#define ZOOM_RESET LGUI(KC_0)
 
 // Tap dance keycodes
 enum tap_dance_keycodes {
