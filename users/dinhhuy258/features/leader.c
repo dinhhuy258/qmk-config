@@ -45,15 +45,16 @@ void process_leader_tmux_keys(void) {
         uint16_t second_key;
         uint16_t target_key;
     } tmux_keys[] = {{KC_F, KC_NO},    // Tmux prefix
-                     {KC_V, KC_BSLS},  // Vertical split
-                     {KC_H, KC_MINS},  // Horizontal split
-                     {KC_ENT, KC_ENT}, // Enter copy mode
-                     {KC_D, KC_COMM},  // Swap panel -D
-                     {KC_U, KC_DOT},   // Swap panel -U
+                     {KC_R, KC_R},     // Reload config
                      {KC_W, KC_W},     // Delete panel
                      {KC_T, KC_T},     // New panel
-                     {KC_J, KC_J},     // tmux-jump
-                     {KC_O, KC_U}};    // tmux-urlview
+                     {KC_G, KC_BSLS},  // Vertical split
+                     {KC_V, KC_MINS},  // Horizontal split
+                     {KC_J, KC_ENT},   // Enter copy mode
+                     {KC_K, KC_J},     // tmux-jump
+                     {KC_L, KC_U},     // tmux-urlview
+                     {KC_D, KC_COMM},  // Swap panel -D
+                     {KC_S, KC_DOT}};  // Swap panel -U
 
     for (int i = 0; i < sizeof(tmux_keys) / sizeof(tmux_keys[0]); i++) {
         if (leader_sequence_three_keys(KC_F, tmux_keys[i].second_key, KC_NO)) {
