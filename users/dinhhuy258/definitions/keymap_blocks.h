@@ -44,7 +44,7 @@
 #define ___________________SYM_R1__________________       KC_AT,           KC_ASTR,         KC_HASH,         KC_PERC,         KC_COLON
 #define ___________________SYM_R2__________________       KC_EXLM,         LSFT_T(KC_EQL),  KC_MINS,         KC_BSLS,         KC_SCLN
 #define ___________________SYM_R3__________________       KC_QUOT,         KC_DQUO,         KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________SYM_THUMB_RIGHT______________       KC_BSPC,         _______
+#define ______________SYM_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
 #define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_MODE_RESIZE,  WM_MODE_MOVE,    WM_L_TILES,      WM_L_ACCORDION

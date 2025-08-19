@@ -32,8 +32,8 @@ layers:
               "$$tabler:brightness-down$$",
               "$$tabler:brightness-up$$",
               "Screenshot",
-              "Zoom out",
-              "Zoom in",
+              "$$tabler:zoom-out$$",
+              "$$tabler:zoom-in$$",
               null,
               null,
               null,
@@ -56,7 +56,7 @@ layers:
               "$$tabler:volume-2$$",
               "$$tabler:volume$$",
               "$$tabler:volume-off$$",
-              "Zoom reset",
+              "$$tabler:zoom-reset$$",
               null,
               "Nav left",
               "Vim left",
@@ -120,7 +120,7 @@ layers:
         - null
         - null
         - null
-        - "Backspace"
+        - null
         - { type: held }
         - null
     WM:
