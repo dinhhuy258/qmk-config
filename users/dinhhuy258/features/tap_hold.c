@@ -26,8 +26,7 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, u
 
 bool get_permissive_hold(uint16_t keycode, keyrecord_t* record) {
     switch (keycode) {
-        case HYPR_T(KC_G):
-        case HYPR_T(KC_H):
+        case LGUI_T(KC_SCLN):
             // Do not select the hold action when another key is tapped.
             return false;
         default:

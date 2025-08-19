@@ -7,14 +7,14 @@
 
 // clang-format off
 #define __________________BASE_L1__________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T
-#define __________________BASE_L2__________________       LGUI_T(KC_A),    LOPT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    HYPR_T(KC_G)
+#define __________________BASE_L2__________________       LGUI_T(KC_A),    LOPT_T(KC_S),    LCTL_T(KC_D),    LSFT_T(KC_F),    KC_G
 #define __________________BASE_L3__________________       KC_Z,            KC_X,            KC_C,            KC_V,            KC_B
 #define ______________BASE_THUMB_LEFT______________       LT(NAV, KC_ESC), LT(MOU, KC_SPC)
 
 #define __________________BASE_R1__________________       KC_Y,            KC_U,            KC_I,            KC_O,            KC_P
-#define __________________BASE_R2__________________       HYPR_T(KC_H),    LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
+#define __________________BASE_R2__________________       KC_H,            LSFT_T(KC_J),    LCTL_T(KC_K),    LALT_T(KC_L),    LGUI_T(KC_SCLN)
 #define __________________BASE_R3__________________       KC_N,            KC_M,            KC_COMM,         KC_DOT,          KC_SLSH
-#define ______________BASE_THUMB_RIGHT_____________       KC_ENT,          LT(SYM, KC_NO)
+#define ______________BASE_THUMB_RIGHT_____________       LT(SHORTCUT, KC_ENT), LT(SYM, KC_NO)
 
 #define ___________________NAV_L1__________________       KC_BRID,         KC_BRIU,         SCREENSHOT,      XXXXXXX,         XXXXXXX
 #define ___________________NAV_L2__________________       KC_LGUI,         KC_LOPT,         KC_LCTL,         KC_LSFT,         XXXXXXX
@@ -59,6 +59,16 @@
 #else
 #define ______________WM_THUMB_RIGHT_______________       _______,         _______
 #endif
+
+#define ________________SHORTCUT_L1________________       HYPR(KC_Q),      HYPR(KC_W),      HYPR(KC_E),      HYPR(KC_R),      XXXXXXX
+#define ________________SHORTCUT_L2________________       HYPR(KC_A),      HYPR(KC_S),      HYPR(KC_D),      HYPR(KC_F),      XXXXXXX
+#define ________________SHORTCUT_L3________________       HYPR(KC_Z),      XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ____________SHORTCUT_THUMB_LEFT____________       _______,         HYPR(KC_SPC)
+
+#define ________________SHORTCUT_R1________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ________________SHORTCUT_R2________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ________________SHORTCUT_R3________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ____________SHORTCUT_THUMB_RIGHT___________       _______,         _______
 
 #ifdef GAME_LAYER_ENABLE
 #define ___________________GAME_L1_________________       KC_Q,            KC_W,            KC_E,            KC_R,            KC_T

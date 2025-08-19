@@ -48,6 +48,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ___________________WM_L3___________________, ___________________WM_R3___________________,
         ______________WM_THUMB_LEFT________________, ______________WM_THUMB_RIGHT_______________
     ),
+    [SHORTCUT] = LAYOUT_split_3x5_3_base_wrapper(
+        ________________SHORTCUT_L1________________, ________________SHORTCUT_R1________________,
+        ________________SHORTCUT_L2________________, ________________SHORTCUT_R2________________,
+        ________________SHORTCUT_L3________________, ________________SHORTCUT_R3________________,
+        ____________SHORTCUT_THUMB_LEFT____________, ____________SHORTCUT_THUMB_RIGHT___________
+    ),
     #ifdef GAME_LAYER_ENABLE
     [GAME] = LAYOUT_split_3x5_3_base_wrapper(
         ___________________GAME_L1_________________, ___________________GAME_R1_________________,

@@ -6,6 +6,7 @@ enum layers {
     MOU,
     SYM,
     WM,
+    SHORTCUT,
 #ifdef GAME_LAYER_ENABLE
     GAME,
 #endif
