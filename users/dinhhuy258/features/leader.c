@@ -28,9 +28,18 @@ static void send_tmux_key(uint16_t key) {
 }
 
 bool process_leader_command_keys(void) {
-    static const uint16_t cmd_alt_ctrl_keys[] = {KC_R, KC_F, KC_P, KC_O, KC_J, KC_S, KC_W, KC_N};
+    static const uint16_t cmd_alt_ctrl_keys[] = {
+        KC_J, // bw_get_password
+        KC_K, // bw_get_totp
+        KC_F, // fcmd ~/.cmds
+        KC_D, // fm
+        KC_S, // sgg (Search Google)
+        KC_W, // aow (Open AWS Console in Firefox browser)
+        KC_A, // index.norg (Notes)
+        KC_Q, // k9s
+    };
     for (int i = 0; i < sizeof(cmd_alt_ctrl_keys) / sizeof(cmd_alt_ctrl_keys[0]); i++) {
-        if (leader_sequence_two_keys(KC_C, cmd_alt_ctrl_keys[i])) {
+        if (leader_sequence_two_keys(KC_J, cmd_alt_ctrl_keys[i])) {
             send_cmd_alt_ctrl_key(cmd_alt_ctrl_keys[i]);
 
             return true;
@@ -44,17 +53,17 @@ void process_leader_tmux_keys(void) {
     static const struct {
         uint16_t second_key;
         uint16_t target_key;
-    } tmux_keys[] = {{KC_F, KC_NO},    // Tmux prefix
-                     {KC_R, KC_R},     // Reload config
-                     {KC_W, KC_W},     // Delete panel
-                     {KC_T, KC_T},     // New panel
-                     {KC_G, KC_BSLS},  // Vertical split
-                     {KC_V, KC_MINS},  // Horizontal split
-                     {KC_J, KC_ENT},   // Enter copy mode
-                     {KC_K, KC_J},     // tmux-jump
-                     {KC_L, KC_U},     // tmux-urlview
-                     {KC_D, KC_COMM},  // Swap panel -D
-                     {KC_S, KC_DOT}};  // Swap panel -U
+    } tmux_keys[] = {{KC_F, KC_NO},   // Tmux prefix
+                     {KC_R, KC_R},    // Reload config
+                     {KC_W, KC_W},    // Delete panel
+                     {KC_T, KC_T},    // New panel
+                     {KC_G, KC_BSLS}, // Vertical split
+                     {KC_V, KC_MINS}, // Horizontal split
+                     {KC_J, KC_ENT},  // Enter copy mode
+                     {KC_K, KC_J},    // tmux-jump
+                     {KC_L, KC_U},    // tmux-urlview
+                     {KC_D, KC_COMM}, // Swap panel -D
+                     {KC_S, KC_DOT}}; // Swap panel -U
 
     for (int i = 0; i < sizeof(tmux_keys) / sizeof(tmux_keys[0]); i++) {
         if (leader_sequence_three_keys(KC_F, tmux_keys[i].second_key, KC_NO)) {
