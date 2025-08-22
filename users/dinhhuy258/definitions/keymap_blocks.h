@@ -48,12 +48,12 @@
 
 #define ___________________WM_L1___________________       WM_WS_1,         WM_WS_2,         WM_WS_3,         WM_WS_4,         WM_WS_5
 #define ___________________WM_L2___________________       WM_FULLSCREEN,   WM_MODE_RESIZE,  WM_MODE_MOVE,    WM_L_TILES,      WM_L_ACCORDION
-#define ___________________WM_L3___________________       WM_MODE_JOIN,    XXXXXXX,         WM_CLOSE,        XXXXXXX,         XXXXXXX
+#define ___________________WM_L3___________________       WM_MODE_JOIN,    XXXXXXX,         WM_CLOSE,        RECT_SMALLER,    RECT_LARGER
 #define ______________WM_THUMB_LEFT________________       _______,         TD(TD_RESET)
 
 #define ___________________WM_R1___________________       WM_MOVE_WS_1,    WM_MOVE_WS_2,    WM_MOVE_WS_3,    WM_MOVE_WS_4,    WM_MOVE_WS_5
 #define ___________________WM_R2___________________       WM_FOCUS_LEFT,   WM_FOCUS_DOWN,   WM_FOCUS_UP,     WM_FOCUS_RIGHT,  WM_TOGGLE_FT
-#define ___________________WM_R3___________________       XXXXXXX,         WM_MOVE_MONITOR, XXXXXXX,         XXXXXXX,         XXXXXXX
+#define ___________________WM_R3___________________       RECT_CENTER,     WM_MOVE_MONITOR, XXXXXXX,         XXXXXXX,         XXXXXXX
 #ifdef GAME_LAYER_ENABLE
 #define ______________WM_THUMB_RIGHT_______________       TO(GAME),        _______
 #else
