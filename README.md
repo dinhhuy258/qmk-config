@@ -4,7 +4,7 @@ This repository contains firmware for my keyboards running QMK.
 
 ## Keymap
 
-![my_keymap](https://github.com/user-attachments/assets/03713998-56b3-4687-b16b-bc8ee6e23a2f)
+![my_keymap](https://github.com/user-attachments/assets/4657fd5a-2fe1-434f-af53-7a1c305381d8)
 
 ## Installation
 
