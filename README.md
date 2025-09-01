@@ -6,6 +6,47 @@ This repository contains firmware for my keyboards running QMK.
 
 ![my_keymap](https://github.com/user-attachments/assets/4657fd5a-2fe1-434f-af53-7a1c305381d8)
 
+This userspace defines a **Leader** workflow triggered by tapping the **SYM** layer key (configured as `LT(SYM, KC_NO)`) and then entering short sequences.
+
+## Leader Key Sequences
+
+### Command Sequences (Leader → J → key)
+
+Sends **Cmd+Alt+Ctrl+\<Key>** to launch my custom commands:
+
+| Sequence     | Sends          | Action                           |
+| ------------ | -------------- | -------------------------------- |
+| `Leader J J` | Cmd+Alt+Ctrl+J | Bitwarden: Get password          |
+| `Leader J K` | Cmd+Alt+Ctrl+K | Bitwarden: Get TOTP              |
+| `Leader J F` | Cmd+Alt+Ctrl+F | Open command palette (`~/.cmds`) |
+| `Leader J D` | Cmd+Alt+Ctrl+D | File manager                     |
+| `Leader J S` | Cmd+Alt+Ctrl+S | Google search                    |
+| `Leader J W` | Cmd+Alt+Ctrl+W | AWS Console in Firefox           |
+| `Leader J A` | Cmd+Alt+Ctrl+A | Open notes (`index.norg`)        |
+| `Leader J Q` | Cmd+Alt+Ctrl+Q | Launch `k9s` (Kubernetes CLI)    |
+
+### Tmux Sequences (Leader → F → key)
+
+Sends tmux commands prefixed with **Ctrl+F**:
+
+| Sequence     | Sends     | Action             |
+| ------------ | --------- | ------------------ |
+| `Leader F F` | Ctrl+F    | Tmux prefix only   |
+| `Leader F R` | Ctrl+F, R | Reload tmux config |
+| `Leader F W` | Ctrl+F, W | Delete panel       |
+| `Leader F T` | Ctrl+F, T | New panel          |
+| `Leader F G` | Ctrl+F, G | Vertical split     |
+| `Leader F V` | Ctrl+F, V | Horizontal split   |
+| `Leader F J` | Ctrl+F, J | Enter copy mode    |
+| `Leader F K` | Ctrl+F, K | `tmux-jump`        |
+| `Leader F L` | Ctrl+F, L | `tmux-urlview`     |
+| `Leader F D` | Ctrl+F, D | Swap panel down    |
+| `Leader F S` | Ctrl+F, S | Swap panel up      |
+| `Leader F Z` | Ctrl+F, Z | Swap window left   |
+| `Leader F B` | Ctrl+F, B | Swap window right  |
+| `Leader F U` | Ctrl+F, U | Save session       |
+| `Leader F P` | Ctrl+F, P | Load session       |
+
 ## Installation
 
 This repository is designed as an [External QMK Userspace](https://docs.qmk.fm/newbs_external_userspace). To use it with QMK, follow these steps:
