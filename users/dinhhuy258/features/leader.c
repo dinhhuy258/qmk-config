@@ -50,6 +50,21 @@ bool process_leader_command_keys(void) {
 }
 
 void process_leader_tmux_keys(void) {
+    // Navi cheatsheet
+    if (leader_sequence_three_keys(KC_F, KC_A, KC_NO)) {
+        register_code(KC_LCTL);
+        register_code(KC_F);
+        unregister_code(KC_F);
+        unregister_code(KC_LCTL);
+        wait_ms(10);
+        register_code(KC_LCTL);
+        register_code(KC_G);
+        unregister_code(KC_G);
+        unregister_code(KC_LCTL);
+
+        return;
+    }
+
     static const struct {
         uint16_t second_key;
         uint16_t target_key;

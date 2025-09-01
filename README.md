@@ -29,23 +29,24 @@ Sends **Cmd+Alt+Ctrl+\<Key>** to launch my custom commands:
 
 Sends tmux commands prefixed with **Ctrl+F**:
 
-| Sequence     | Sends     | Action             |
-| ------------ | --------- | ------------------ |
-| `Leader F F` | Ctrl+F    | Tmux prefix only   |
-| `Leader F R` | Ctrl+F, R | Reload tmux config |
-| `Leader F W` | Ctrl+F, W | Delete panel       |
-| `Leader F T` | Ctrl+F, T | New panel          |
-| `Leader F G` | Ctrl+F, G | Vertical split     |
-| `Leader F V` | Ctrl+F, V | Horizontal split   |
-| `Leader F J` | Ctrl+F, J | Enter copy mode    |
-| `Leader F K` | Ctrl+F, K | `tmux-jump`        |
-| `Leader F L` | Ctrl+F, L | `tmux-urlview`     |
-| `Leader F D` | Ctrl+F, D | Swap panel down    |
-| `Leader F S` | Ctrl+F, S | Swap panel up      |
-| `Leader F Z` | Ctrl+F, Z | Swap window left   |
-| `Leader F B` | Ctrl+F, B | Swap window right  |
-| `Leader F U` | Ctrl+F, U | Save session       |
-| `Leader F P` | Ctrl+F, P | Load session       |
+| Sequence     | Sends          | Action             |
+| ------------ | -------------- | ------------------ |
+| `Leader F F` | Ctrl+F         | Tmux prefix only   |
+| `Leader F R` | Ctrl+F, R      | Reload tmux config |
+| `Leader F W` | Ctrl+F, W      | Delete panel       |
+| `Leader F T` | Ctrl+F, T      | New panel          |
+| `Leader F G` | Ctrl+F, G      | Vertical split     |
+| `Leader F V` | Ctrl+F, V      | Horizontal split   |
+| `Leader F J` | Ctrl+F, J      | Enter copy mode    |
+| `Leader F K` | Ctrl+F, K      | `tmux-jump`        |
+| `Leader F L` | Ctrl+F, L      | `tmux-urlview`     |
+| `Leader F D` | Ctrl+F, D      | Swap panel down    |
+| `Leader F S` | Ctrl+F, S      | Swap panel up      |
+| `Leader F Z` | Ctrl+F, Z      | Swap window left   |
+| `Leader F B` | Ctrl+F, B      | Swap window right  |
+| `Leader F U` | Ctrl+F, U      | Save session       |
+| `Leader F P` | Ctrl+F, P      | Load session       |
+| `Leader F A` | Ctrl+F, Ctrl+G | Navi cheatsheet    |
 
 ## Installation
 
