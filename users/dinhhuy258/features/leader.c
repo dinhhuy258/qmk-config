@@ -80,8 +80,6 @@ void process_leader_tmux_keys(void) {
         {KC_L, KC_L},  // tmux-urlview
         {KC_D, KC_D},  // Swap panel -D
         {KC_S, KC_S},  // Swap panel -U
-        {KC_Z, KC_Z},  // Swap to previous window
-        {KC_B, KC_B},  // Swap to next window
         {KC_U, KC_U},  // Save session
         {KC_P, KC_P},  // Load session
     }; // Swap panel -U

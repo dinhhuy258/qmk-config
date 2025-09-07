@@ -42,8 +42,6 @@ Sends tmux commands prefixed with **Ctrl+F**:
 | `Leader F L` | Ctrl+F, L      | `tmux-urlview`     |
 | `Leader F D` | Ctrl+F, D      | Swap panel down    |
 | `Leader F S` | Ctrl+F, S      | Swap panel up      |
-| `Leader F Z` | Ctrl+F, Z      | Swap window left   |
-| `Leader F B` | Ctrl+F, B      | Swap window right  |
 | `Leader F U` | Ctrl+F, U      | Save session       |
 | `Leader F P` | Ctrl+F, P      | Load session       |
 | `Leader F A` | Ctrl+F, Ctrl+G | Navi cheatsheet    |

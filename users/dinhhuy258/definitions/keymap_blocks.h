@@ -23,7 +23,7 @@
 
 #define ___________________NAV_R1__________________       XXXXXXX,         XXXXXXX,         XXXXXXX,         XXXXXXX,         TD(TD_SWITCH_APP)
 #define ___________________NAV_R2__________________       KC_LEFT,         KC_DOWN,         KC_UP,           KC_RGHT,         SWITCH_APP
-#define ___________________NAV_R3__________________       NAV_LEFT,        _______,         _______,         NAV_RIGHT,       LGUI(KC_GRAVE)
+#define ___________________NAV_R3__________________       NAV_LEFT,        MOVE_LEFT,       MOVE_RIGHT,      NAV_RIGHT,       LGUI(KC_GRAVE)
 #define ______________NAV_THUMB_RIGHT______________       _______,         _______
 
 #define ___________________MOU_L1__________________       XXXXXXX,         XXXXXXX,         MOU_MIN_SPEED,   MOU_MAX_SPEED,   XXXXXXX

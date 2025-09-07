@@ -59,8 +59,8 @@ layers:
               "$$tabler:zoom-reset$$",
               null,
               "Nav left",
-              null,
-              null,
+              "Move left",
+              "Move right",
               "Nav right",
               "Switch window",
           ]

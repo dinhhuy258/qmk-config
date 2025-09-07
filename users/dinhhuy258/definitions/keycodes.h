@@ -3,6 +3,8 @@
 #include QMK_KEYBOARD_H
 
 #define SCREENSHOT HYPR(KC_4)
+#define MOVE_LEFT KC_F21
+#define MOVE_RIGHT KC_F22
 #define NAV_LEFT KC_F23
 #define NAV_RIGHT KC_F24
 #define MOU_MAX_SPEED MS_ACL2
