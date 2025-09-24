@@ -42,9 +42,18 @@ Sends tmux commands prefixed with **Ctrl+F**:
 | `Leader F L` | Ctrl+F, L      | `tmux-urlview`     |
 | `Leader F D` | Ctrl+F, D      | Swap panel down    |
 | `Leader F S` | Ctrl+F, S      | Swap panel up      |
-| `Leader F U` | Ctrl+F, U      | Save session       |
+| `Leader F Y` | Ctrl+F, Y      | Save session       |
 | `Leader F P` | Ctrl+F, P      | Load session       |
 | `Leader F A` | Ctrl+F, Ctrl+G | Navi cheatsheet    |
+
+### Text Expansion Sequences (Leader → A → key)
+
+Types common text strings:
+
+| Sequence     | Output       |
+| ------------ | ------------ |
+| `Leader A D` | `dinhhuy258` |
+| `Leader A L` | `LGTM`       |
 
 ## Installation
 

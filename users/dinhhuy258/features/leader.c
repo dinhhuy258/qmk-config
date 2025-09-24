@@ -80,7 +80,7 @@ void process_leader_tmux_keys(void) {
         {KC_L, KC_L},  // tmux-urlview
         {KC_D, KC_D},  // Swap panel -D
         {KC_S, KC_S},  // Swap panel -U
-        {KC_U, KC_U},  // Save session
+        {KC_Y, KC_Y},  // Save session
         {KC_P, KC_P},  // Load session
     }; // Swap panel -U
 
@@ -107,13 +107,33 @@ bool process_leader_key(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+bool process_leader_text_keys(void) {
+    // Leader + A + D -> "dinhhuy258"
+    if (leader_sequence_three_keys(KC_A, KC_D, KC_NO)) {
+        SEND_STRING("dinhhuy258");
+        return true;
+    }
+
+    // Leader + A + L -> "LGTM"
+    if (leader_sequence_three_keys(KC_A, KC_L, KC_NO)) {
+        SEND_STRING("LGTM");
+        return true;
+    }
+
+    return false;
+}
+
 void leader_end_user(void) {
     if (process_secrets()) {
         return; // If a secret was processed, do not process further leader commands
     }
 
     if (process_leader_command_keys()) {
-        return; // If a command key was processed, do not process further tmux keys
+        return; // If a command key was processed, do not process further keys
+    }
+
+    if (process_leader_text_keys()) {
+        return; // If a text key was processed, do not process further keys
     }
 
     process_leader_tmux_keys();
