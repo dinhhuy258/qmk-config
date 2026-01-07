@@ -4,7 +4,7 @@ This repository contains firmware for my keyboards running QMK.
 
 ## Keymap
 
-![my_keymap](https://github.com/user-attachments/assets/4657fd5a-2fe1-434f-af53-7a1c305381d8)
+![my_keymap](https://github.com/user-attachments/assets/067554bd-2ec2-4ec4-bfe4-7f3c0c08b968)
 
 This userspace defines a **Leader** workflow triggered by tapping the **SYM** layer key (configured as `LT(SYM, KC_NO)`) and then entering short sequences.
 
