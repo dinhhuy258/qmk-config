@@ -14,7 +14,16 @@ void td_switch_app_finished(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_snip_finished(tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+        tap_code16(SNIP);       // Single tap: SNIP
+    } else {
+        tap_code16(SNIP_COPY);  // Double tap: SNIP_COPY
+    }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
     [TD_SWITCH_APP] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_switch_app_finished, NULL),
     [TD_RESET]      = ACTION_TAP_DANCE_FN(td_safe_reset),
+    [TD_SNIP]       = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_snip_finished, NULL),
 };

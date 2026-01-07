@@ -2,7 +2,10 @@
 
 #include QMK_KEYBOARD_H
 
-#define SCREENSHOT HYPR(KC_4)
+#define SNIP HYPR(KC_1)
+#define SNIP_COPY HYPR(KC_2)
+#define SNIP_PASTE HYPR(KC_3)
+#define SNIP_TOGGLE HYPR(KC_4)
 #define MOVE_LEFT KC_F21
 #define MOVE_RIGHT KC_F22
 #define NAV_LEFT KC_F23
@@ -56,6 +59,7 @@
 enum tap_dance_keycodes {
     TD_SWITCH_APP,
     TD_RESET,
+    TD_SNIP,
 };
 
 // Custom keycodes
