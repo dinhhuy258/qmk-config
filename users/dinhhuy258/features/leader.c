@@ -37,6 +37,7 @@ bool process_leader_command_keys(void) {
         KC_W, // aow (Open AWS Console in Firefox browser)
         KC_A, // index.norg (Notes)
         KC_Q, // k9s
+        KC_G, // gapr (Approve GitHub PR)
     };
     for (int i = 0; i < sizeof(cmd_alt_ctrl_keys) / sizeof(cmd_alt_ctrl_keys[0]); i++) {
         if (leader_sequence_two_keys(KC_J, cmd_alt_ctrl_keys[i])) {

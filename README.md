@@ -24,6 +24,7 @@ Sends **Cmd+Alt+Ctrl+\<Key>** to launch my custom commands:
 | `Leader J W` | Cmd+Alt+Ctrl+W | AWS Console in Firefox           |
 | `Leader J A` | Cmd+Alt+Ctrl+A | Open notes (`index.norg`)        |
 | `Leader J Q` | Cmd+Alt+Ctrl+Q | Launch `k9s` (Kubernetes CLI)    |
+| `Leader J G` | Cmd+Alt+Ctrl+G | Approve GitHub PR from clipboard |
 
 ### Tmux Sequences (Leader → F → key)
 
