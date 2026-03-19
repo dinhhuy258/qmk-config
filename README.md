@@ -123,7 +123,15 @@ You can also customize the tapping term (default is 200ms) by using the `TAPPING
 make crkbd:dinhhuy258:flash TAPPING_TERM=150
 ```
 
-To initially boot the RP2040 into bootloader mode
+## Reset Keyboard
+
+There are two ways to reset the keyboard into bootloader mode for flashing:
+
+### Software Reset (Tap Dance)
+
+On the **WM layer** (activated by holding NAV + SYM simultaneously), tap the left thumb reset key **3 or more times** to reset the keyboard. This is implemented as a tap dance safety mechanism to prevent accidental resets.
+
+### Hardware Reset (RP2040 Only)
 
 1. Hold down the BOOT button on the RP2040 board.
 2. While holding the BOOT button, plug the USB cable into your computer.
