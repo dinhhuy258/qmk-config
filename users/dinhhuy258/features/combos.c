@@ -46,6 +46,12 @@ combo_t key_combos[] = {
 // clang-format on
 
 bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+#ifdef GAME_LAYER_ENABLE
+    if (layer_state_is(GAME)) {
+        return false;
+    }
+#endif
+
     switch (combo_index) {
         case VIM_QUIT:
         case INPUT_SOURCE:

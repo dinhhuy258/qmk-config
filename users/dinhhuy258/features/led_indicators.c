@@ -25,6 +25,13 @@ void update_led_indicators(layer_state_t state) {
             ergodox_right_led_1_on();
             ergodox_right_led_2_on();
             break;
+#ifdef GAME_LAYER_ENABLE
+        case GAME:
+            ergodox_right_led_1_on();
+            ergodox_right_led_2_on();
+            ergodox_right_led_3_on();
+            break;
+#endif
         default:
             break;
     }
